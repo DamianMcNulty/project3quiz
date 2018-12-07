@@ -6,7 +6,7 @@ from os import environ
 app = Flask(__name__)
 
 # use decorators to link the function to a url
-@app.route('/')
+@app.route('/hello')
 def home():
     return "Hello, World!"  # return a string
 
