@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 class="text-center">Java Quiz</h1>
+<div class="landing m0a mt10 w80-20vw">
+    <form method="POST">
+        <input class="w100" type="text" name="name" placeholder="Enter username">
+        <br>
+        <br>
+        {% with messages = get_flashed_messages() %} 
+            {% if messages %}
+                <div class="alert alert-danger text-center">{{ messages[0] }}</div>
+            {% endif %} 
+        {% endwith %}
+        <button type="submit" class="btn btn-default btn-success mt10 w100" id="userButton">Play</button>
+    </form>
+</div>
+<br>
+<br>
+    
+{% endblock %}

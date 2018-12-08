@@ -1,0 +1,43 @@
+{% extends 'layout.html' %} {% block content %}
+<div>
+    <div class="row mt10">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <form method="POST" name="sendAnswer" id="answerForm">
+                <h2>Welcome {{name}}</h2>
+                <p>{{ data.question }}</p>
+                <img src="{{ data.url2 }}" style="height:250px;width: 300px">
+                </p>{{ data.code }}</p>
+                <div class="control-group">
+                    <p>
+                        A. {{data.a}}<br /> 
+                        B. {{data.b}}<br />
+                        C. {{data.c}}<br /> 
+                        D. {{data.d}}<br /> 
+                        E. {{data.e}}
+                    </p>
+                    <div class="form-group floating-label-form-group controls">
+                        <!-- <label for="question">Answer</label> -->
+                        <input type="text" class="form-control" placeholder="Answer here" name="answer" id="answer"
+                            required data-validation-required-message="Please enter your answer.">
+                        <p class="help-block text-danger"></p>
+                        {% with messages = get_flashed_messages() %} {% if messages %}
+                        <ul class="flashes">
+                            {% for message in messages %}
+                            <ul>
+                                <li>{{ message }}</li>
+                            </ul>
+                            {% endfor %}
+                        </ul>
+                        {% endif %} {% endwith %}
+                        <button type="submit" class="btn btn-default btn-success" id="sendAnswerButton">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <h2>question {{question + 1}}</h2>
+            <h2>name: {{ name }}</h2>
+            <h2>score: {{ score }}</h2>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
