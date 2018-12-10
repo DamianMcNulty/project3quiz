@@ -49,7 +49,7 @@ def game(name):
         user.append({"name": name, "score": score})
         return redirect('/' + name)
     if request.method == "POST" and request.form["answer"] != data[question]['answer']:
-        message = "You guessed: " + request.form["answer"]
+        message = "Answer " + request.form["answer"] + " is incorrect, please try again."
         flash(message)
         return redirect('/' + name)
     return render_template("game.html", page_title = "Java Quiz", data=data[question], name=name, score=score, question=question, year=datetime.now().year)
@@ -69,5 +69,5 @@ def leaderboard():
 
 if __name__ == '__main__':
     HOST = environ.get('IP')
-    PORT = int(environ.get('PORT'))
+    PORT = int(environ.get('C9_PORT'))
     app.run(HOST, PORT, debug=True)

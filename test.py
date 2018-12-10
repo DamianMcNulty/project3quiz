@@ -90,7 +90,17 @@ class FlaskTestCase(unittest.TestCase):
         data=dict(name="f2"),
         follow_redirects=True
         )
-        self.assertIn(b'question 1', response.data)
+        self.assertIn(b'question 2', response.data)
+        
+     # A user answers the first question with the answer D
+    def test_game_answer(self):
+        tester = app.test_client(self)
+        response = tester.post(
+        '/game',
+        data=dict(answer="D"),
+        follow_redirects=True
+        )
+        self.assertIn(b'question 2', response.data)
 
 if __name__ == '__main__':
     unittest.main()
