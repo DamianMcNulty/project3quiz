@@ -67,7 +67,15 @@ def leaderboard():
         scores = user
     )
 
+if environ.get('DEVELOPMENT'):
+    development = True
+else:
+    development = False
+
 if __name__ == '__main__':
     HOST = environ.get('IP')
-    PORT = int(environ.get('C9_PORT'))
-    app.run(HOST, PORT, debug=True)
+    if development:
+        PORT = int(environ.get('C9_PORT'))
+    else:
+        PORT = int(environ.get('PORT'))
+    app.run(HOST, PORT, debug=development)

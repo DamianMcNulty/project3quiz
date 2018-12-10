@@ -66,8 +66,7 @@
 Cloud9
 ```
     pip3 install -r requirements.txt
-    HOST = environ.get('IP')
-    PORT = int(environ.get('C9_PORT'))
+    export DEVELOPMENT=1
     python3 runserver.py
 ```
 
