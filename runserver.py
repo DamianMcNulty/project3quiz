@@ -42,12 +42,12 @@ def game(name):
     if name == "favicon.ico":
         return redirect('/')
     myscores = []
+    global score
     myscores.append(score);
     data = []
     with open("data/data.json", "r") as json_data:
         data = json.load(json_data)
     global question
-    global score
     if request.method == "POST" and request.form["answer"] == data[question]['answer']:
         score += 1
         myscores.append(score);
