@@ -70,6 +70,10 @@ Cloud9
     python3 runserver.py
 ```
 
+## Research
+[(Back to top)](#table-of-contents)
+1. https://www.reddit.com/r/learnpython/comments/1hsxxy/faviconico_get_request_in_flask/
+
 ## Deployment
 [(Back to top)](#table-of-contents)
 1. sudo pip3 install flask

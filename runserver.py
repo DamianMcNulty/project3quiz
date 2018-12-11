@@ -13,6 +13,7 @@ user = []
 score = 0
 question = 0
 users = []
+game_over = False
 
 @app.route('/hello')
 def hello():
@@ -38,6 +39,10 @@ def home():
 
 @app.route('/<name>', methods=["GET", "POST"])
 def game(name):
+    if name == "favicon.ico":
+        return redirect('/')
+    myscores = []
+    myscores.append(score);
     data = []
     with open("data/data.json", "r") as json_data:
         data = json.load(json_data)
@@ -45,14 +50,19 @@ def game(name):
     global score
     if request.method == "POST" and request.form["answer"] == data[question]['answer']:
         score += 1
+        myscores.append(score);
         question += 1
-        user.append({"name": name, "score": score})
         return redirect('/' + name)
     if request.method == "POST" and request.form["answer"] != data[question]['answer']:
         message = "Answer " + request.form["answer"] + " is incorrect, please try again."
         flash(message)
         return redirect('/' + name)
-    return render_template("game.html", page_title = "Java Quiz", data=data[question], name=name, score=score, question=question, year=datetime.now().year)
+    highscore = max(myscores)
+    for n in user:
+        if n['name'] == name:
+          user.remove(n)
+    user.append({"name": name, "score": highscore})
+    return render_template("game.html", page_title = "Java Quiz", data=data[question], name=name, question=question, year=datetime.now().year)
 
 
 @app.route('/leaderboard', methods=["GET"])

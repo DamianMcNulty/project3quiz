@@ -101,6 +101,24 @@ class FlaskTestCase(unittest.TestCase):
         follow_redirects=True
         )
         self.assertIn(b'question 2', response.data)
+        
+     # A user answers the first 2 questions and the user's leaderboard score is 2
+    def test_leaderboard_score(self):
+        tester = app.test_client(self)
+        response = tester.post(
+        '/game',
+        data=dict(answer="D"),
+        follow_redirects=True
+        )
+        response = tester.post(
+        '/game',
+        data=dict(answer="A"),
+        follow_redirects=True
+        )
+        response = tester.post(
+        '/leaderboard'
+        )
+        self.assertIn(b'2', response.data)
 
 if __name__ == '__main__':
     unittest.main()
