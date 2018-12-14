@@ -4,11 +4,13 @@
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/code1.png",
         "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/code1.png",
-        "a": "01",
-        "b": "Compilation fails on the line marked as //1",
-        "c": "Compilation fails on the line marked as //2",
-        "d": "Compilation fails on the line marked as //3",
-        "e": "Compilation fails on the line marked as //4",
+        "answers": [
+            "A: 01",
+            "B: Compilation fails on the line marked as //1",
+            "C: Compilation fails on the line marked as //2",
+            "D: Compilation fails on the line marked as //3",
+            "E: Compilation fails on the line marked as //4"
+            ],
         "answer": "D"
     },
     {
@@ -16,9 +18,11 @@
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/code1_4.png",
         "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/code1_4.png",
-        "a": "1",
-        "b": "Compilation fails",
-        "c": "An Exception occurs at run time",
+        "answers": [
+            "A: 1",
+            "B: Compilation fails",
+            "C: An Exception occurs at run time"
+            ],
         "answer": "A"
     },
     {
@@ -26,10 +30,12 @@
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/code1_5.png",
         "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/code1_5.png",
-        "a": "Hi",
-        "b": "Bye",
-        "c": "Compilation fails on the line marked as //1",
-        "d": "Compilation fails on the line marked as //2",
+        "answers": [
+            "A: Hi",
+            "B: Bye",
+            "C: Compilation fails on the line marked as //1",
+            "D: Compilation fails on the line marked as //2"
+            ],
         "answer": "B"
     },
     {
@@ -37,10 +43,12 @@
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/code1_6.png",
         "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/code1_6.png",
-        "a": "0",
-        "b": "3",
-        "c": "2",
-        "d": "Compilation fails",
+        "answers": [
+            "A: 0",
+            "B: 3",
+            "C: 2",
+            "D: Compilation fails"
+            ],
         "answer": "D"
     },   
     {
@@ -48,10 +56,12 @@
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/chapter2/code2_1.png",
         "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/chapter2/code2_1.png",
-        "a": "true",
-        "b": "false",
-        "c": "Compilation fails",
-        "d": "An Exception occurs at run time",
+        "answers": [
+            "A: true",
+            "B: false",
+            "C: Compilation fails",
+            "D: An Exception occurs at run time"
+            ],
         "answer": "B"
     },   
     {
