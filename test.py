@@ -32,7 +32,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_index_username_login(self):
         tester = app.test_client(self)
         response = tester.post(
-        '/',
+        '/login',
         data=dict(name="f1"),
         follow_redirects=True
         )
@@ -40,15 +40,15 @@ class FlaskTestCase(unittest.TestCase):
     
         
     # Given a user called f1, another user called f1 can't play the game
-    def test_index_username_login_again(self):
+    def test_username_login_again(self):
         tester = app.test_client(self)
         response = tester.post(
-        '/',
+        '/login',
         data=dict(name="f1"),
         follow_redirects=True
         )
         response = tester.post(
-        '/',
+        '/login',
         data=dict(name="f1"),
         follow_redirects=True
         )
@@ -65,12 +65,24 @@ class FlaskTestCase(unittest.TestCase):
         tester = app.test_client(self)
         response = tester.get('/leaderboard', content_type='html/text')
         self.assertEqual(response.status_code, 200)
+        
+    # login route works ok
+    def test_login(self):
+        tester = app.test_client(self)
+        response = tester.get('/login', content_type='html/text')
+        self.assertEqual(response.status_code, 200)
+        
+    # logout route works ok
+    def test_logout(self):
+        tester = app.test_client(self)
+        response = tester.get('/logout', content_type='html/text')
+        self.assertEqual(response.status_code, 200)
     
-    # user f1 appears in leaderboard
+    # user f1 appears in welcome message after login
     def test_leaderboard_user(self):
         tester = app.test_client(self)
         response = tester.post(
-        '/',
+        '/login',
         data=dict(name="f1"),
         follow_redirects=True
         )
@@ -86,7 +98,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_game_question_num(self):
         tester = app.test_client(self)
         response = tester.post(
-        '/',
+        '/login',
         data=dict(name="f2"),
         follow_redirects=True
         )

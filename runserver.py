@@ -19,21 +19,35 @@ game_over = False
 def hello():
     return "Hello, World!"
 
-@app.route('/', methods=["GET", "POST"])
-@app.route('/home')
-def home():
-    """Renders the home page."""
+@app.route('/')
+def index():
+    return render_template(
+        'index.html',
+        title='Home Page',
+        year=datetime.now().year,
+    )
+    
+@app.route('/logout')
+def logout():
+    return render_template(
+        'logout.html',
+        title='Logout Page',
+        year=datetime.now().year,
+    )
+    
+@app.route('/login', methods=["GET", "POST"])
+def login():
     if request.method == "POST":
         if request.form["name"] in names:
             message = "The user name " + request.form["name"] + " has already been taken"
             flash(message)
-            return render_template('index.html', title='Home Page', year=datetime.now().year)
+            return render_template('login.html', title='Home Page', year=datetime.now().year)
         else:
             names.append(request.form["name"])
         return redirect(request.form["name"])
     return render_template(
-        'index.html',
-        title='Home Page',
+        'login.html',
+        title='Login',
         year=datetime.now().year,
     )
 

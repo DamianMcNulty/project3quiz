@@ -189,3 +189,12 @@ html {
 .landing {
   animation: intro 1s forwards 0s ease-in;
 }
+
+/*****************************************\
+
+  #LEADERBOOARD-TITLE
+  
+\*****************************************/
+.leaderboard {
+  animation: intro 1s forwards 0s ease-in;
+}
