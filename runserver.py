@@ -10,19 +10,13 @@ app.secret_key = urandom(24)
 
 names = []
 user = []
-
-score = 0
-question = 0
 users = []
 game_over = False
 
-@app.route('/hello')
-def hello():
-    session['user'] = "hello"
-    return "Hello, World!"
-
 @app.route('/')
 def index():
+    with open("data/data.json", "r") as json_data:
+        session['data'] = json.load(json_data)
     return render_template(
         'index.html',
         title='Home Page',
@@ -31,11 +25,16 @@ def index():
     
 @app.route('/logout')
 def logout():
+    for n in user:
+        if n['name'] == session['user']:
+          user.remove(n)
+    user.append({"name": session['user'], "score": session['score']})
     session.pop('user', None)
     return render_template(
-        'logout.html',
-        title='Logout Page',
+        'leaderboard.html',
+        title='Leaderboard',
         year=datetime.now().year,
+        scores = user
     )
     
 @app.route('/login', methods=["GET", "POST"])
@@ -63,36 +62,20 @@ def login():
 def game(name):
     if name == "favicon.ico":
         return redirect('/')
-    data = []
-    with open("data/data.json", "r") as json_data:
-        data = json.load(json_data)
+    session['total'] = 5
+    session['question'] = 0
     global question
-    if request.method == "POST" and request.form["answer"] == data[question]['answer']:
+    if request.method == "POST" and request.form["answer"] == session['data'][session['question']]['answer']:
         session['score'] += 1
         session['question'] += 1
+        session['total'] -= 1
         return redirect('/' + name)
-    if request.method == "POST" and request.form["answer"] != data[question]['answer']:
+    if request.method == "POST" and request.form["answer"] != session['data'][session['question']]['answer']:
         message = "Answer " + request.form["answer"] + " is incorrect, please try again."
         flash(message)
         return redirect('/' + name)
-    for n in user:
-        if n['name'] == session['user']:
-          user.remove(n)
-    user.append({"name": session['user'], "score": session['score']})
-    return render_template("game.html", page_title = "Java Quiz", data=data[session['question']], question=session['question'], name=session['user'], year=datetime.now().year)
+    return render_template("game.html", page_title = "Java Quiz", data = session['data'][session['question']], year=datetime.now().year)
 
-
-@app.route('/leaderboard', methods=["GET"])
-def leaderboard():
-    """Renders the leaderboard."""
-    global user
-    return render_template(
-        'leaderboard.html',
-        title='Leaderboard',
-        year=datetime.now().year,
-        message='Leaderboard', 
-        scores = user
-    )
 
 if environ.get('DEVELOPMENT'):
     development = True

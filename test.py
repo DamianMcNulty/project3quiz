@@ -71,12 +71,6 @@ class FlaskTestCase(unittest.TestCase):
         tester = app.test_client(self)
         response = tester.get('/login', content_type='html/text')
         self.assertEqual(response.status_code, 200)
-        
-    # logout route works ok
-    def test_logout(self):
-        tester = app.test_client(self)
-        response = tester.get('/logout', content_type='html/text')
-        self.assertEqual(response.status_code, 200)
     
     # user f1 appears in welcome message after login
     def test_leaderboard_user(self):
