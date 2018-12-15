@@ -1,11 +1,12 @@
-from flask import Flask, render_template, request, flash, redirect, url_for
-from os import environ
+from os import environ, urandom
 import json
 from datetime import datetime
 
+from flask import Flask, render_template, request, flash, redirect, url_for, session
+
 app = Flask(__name__)
 
-app.secret_key = '7l8/%Zb'
+app.secret_key = urandom(24)
 
 names = []
 user = []
@@ -17,6 +18,7 @@ game_over = False
 
 @app.route('/hello')
 def hello():
+    session['user'] = "hello"
     return "Hello, World!"
 
 @app.route('/')
@@ -29,6 +31,7 @@ def index():
     
 @app.route('/logout')
 def logout():
+    session.pop('user', None)
     return render_template(
         'logout.html',
         title='Logout Page',
@@ -37,14 +40,19 @@ def logout():
     
 @app.route('/login', methods=["GET", "POST"])
 def login():
+    if 'user' in session:
+        return redirect(session['user'])
     if request.method == "POST":
         if request.form["name"] in names:
-            message = "The user name " + request.form["name"] + " has already been taken"
+            message = "The user name " + request.form["name"] + " is taken, try another username"
             flash(message)
             return render_template('login.html', title='Home Page', year=datetime.now().year)
         else:
             names.append(request.form["name"])
-        return redirect(request.form["name"])
+            session['user'] = request.form["name"]
+            session['score'] = 0
+            session['question'] = 0
+        return redirect(session['user'])
     return render_template(
         'login.html',
         title='Login',
@@ -55,28 +63,23 @@ def login():
 def game(name):
     if name == "favicon.ico":
         return redirect('/')
-    myscores = []
-    global score
-    myscores.append(score);
     data = []
     with open("data/data.json", "r") as json_data:
         data = json.load(json_data)
     global question
     if request.method == "POST" and request.form["answer"] == data[question]['answer']:
-        score += 1
-        myscores.append(score);
-        question += 1
+        session['score'] += 1
+        session['question'] += 1
         return redirect('/' + name)
     if request.method == "POST" and request.form["answer"] != data[question]['answer']:
         message = "Answer " + request.form["answer"] + " is incorrect, please try again."
         flash(message)
         return redirect('/' + name)
-    highscore = max(myscores)
     for n in user:
-        if n['name'] == name:
+        if n['name'] == session['user']:
           user.remove(n)
-    user.append({"name": name, "score": highscore})
-    return render_template("game.html", page_title = "Java Quiz", data=data[question], name=name, question=question, year=datetime.now().year)
+    user.append({"name": session['user'], "score": session['score']})
+    return render_template("game.html", page_title = "Java Quiz", data=data[session['question']], question=session['question'], name=session['user'], year=datetime.now().year)
 
 
 @app.route('/leaderboard', methods=["GET"])
