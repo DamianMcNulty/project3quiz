@@ -10,7 +10,6 @@ app.secret_key = urandom(24)
 
 names = []
 user = []
-users = []
 game_over = False
 
 @app.route('/')
@@ -51,30 +50,28 @@ def login():
             session['user'] = request.form["name"]
             session['score'] = 0
             session['question'] = 0
-        return redirect(session['user'])
+            session['total'] = 5
+            session['gameover'] = False
+        return redirect('/user/' + session['user'])
     return render_template(
         'login.html',
         title='Login',
         year=datetime.now().year,
     )
 
-@app.route('/<name>', methods=["GET", "POST"])
+@app.route('/user/<name>', methods=["GET", "POST"])
 def game(name):
-    if name == "favicon.ico":
-        return redirect('/')
-    session['total'] = 5
-    session['question'] = 0
-    global question
     if request.method == "POST" and request.form["answer"] == session['data'][session['question']]['answer']:
         session['score'] += 1
         session['question'] += 1
-        session['total'] -= 1
-        return redirect('/' + name)
+        if(session['question'] == 5):
+            session['gameover'] = True
+        return redirect('/user/' + name)
     if request.method == "POST" and request.form["answer"] != session['data'][session['question']]['answer']:
         message = "Answer " + request.form["answer"] + " is incorrect, please try again."
         flash(message)
-        return redirect('/' + name)
-    return render_template("game.html", page_title = "Java Quiz", data = session['data'][session['question']], year=datetime.now().year)
+        return redirect('/user/' + name)
+    return render_template("game.html", page_title = "Java Quiz", data= session['data'][session['question']], question = session['question'], year=datetime.now().year)
 
 
 if environ.get('DEVELOPMENT'):
