@@ -3,7 +3,7 @@
         "question": "Given the following code:",
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/code1.png",
-        "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/code1.png",
+        "url2": "https://damianmcdev1-project3quiz.herokuapp.com/static/data/screenshots/code1.png",
         "answers": [
             "A: 01",
             "B: Compilation fails on the line marked as //1",
@@ -17,7 +17,7 @@
         "question": "Given the following code:",
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/code1_4.png",
-        "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/code1_4.png",
+        "url2": "https://damianmcdev1-project3quiz.herokuapp.com/static/data/screenshots/code1_4.png",
         "answers": [
             "A: 1",
             "B: Compilation fails",
@@ -29,7 +29,7 @@
         "question": "Given the following code:",
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/code1_5.png",
-        "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/code1_5.png",
+        "url2": "https://damianmcdev1-project3quiz.herokuapp.com/static/data/screenshots/code1_5.png",
         "answers": [
             "A: Hi",
             "B: Bye",
@@ -42,7 +42,7 @@
         "question": "Given the following code:",
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/code1_6.png",
-        "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/code1_6.png",
+        "url2": "https://damianmcdev1-project3quiz.herokuapp.com/static/data/screenshots/code1_6.png",
         "answers": [
             "A: 0",
             "B: 3",
@@ -55,7 +55,7 @@
         "question": "Given the following code:",
         "code": "What is the result?",
         "url1": "http://localhost:5555/static/data/screenshots/chapter2/code2_1.png",
-        "url2": "https://project3riddle.azurewebsites.net/static/data/screenshots/chapter2/code2_1.png",
+        "url2": "https://damianmcdev1-project3quiz.herokuapp.com/static/data/screenshots/chapter2/code2_1.png",
         "answers": [
             "A: true",
             "B: false",
@@ -63,9 +63,5 @@
             "D: An Exception occurs at run time"
             ],
         "answer": "B"
-    },   
-    {
-        "question": "Game Over",
-        "answer": "30"
     }
 ]
