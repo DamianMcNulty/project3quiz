@@ -64,16 +64,16 @@ def login():
 def game(name):
     if request.method == "POST":
         if request.form["skip"] == "skip":
-            session['question'] += 1
-            if(session['question'] == 5):
+            if(session['question'] == 4):
                 session['gameover'] = True
+            session['question'] += 1
             return redirect('/user/' + name)
         else:
             if request.form["answer"] == session['data'][session['question']]['answer']:
+                if(session['question'] == 4):
+                    session['gameover'] = True
                 session['score'] += 1
                 session['question'] += 1
-                if(session['question'] == 5):
-                    session['gameover'] = True
                 return redirect('/user/' + name)
             if request.form["answer"] != session['data'][session['question']]['answer']:
                 message = "Answer " + request.form["answer"] + " is incorrect, please try again."
