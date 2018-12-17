@@ -22,8 +22,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url_for('login') }}">Start</a></li>
-                    <li><a href="{{ url_for('logout') }}">Exit game</a></li>
+                    {% if session['login'] %}
+                        <li><a href="{{ url_for('login') }}">Start</a></li>
+                    {% endif %}
+                    {% if session['user'] %}
+                        <li><a href="{{ url_for('logout') }}">Exit game</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

@@ -10,10 +10,10 @@ app.secret_key = urandom(24)
 
 names = []
 user = []
-game_over = False
 
 @app.route('/')
 def index():
+    session['login'] = True
     with open("data/data.json", "r") as json_data:
         session['data'] = json.load(json_data)
     return render_template(
@@ -38,6 +38,7 @@ def logout():
     
 @app.route('/login', methods=["GET", "POST"])
 def login():
+    session.pop('login', None)
     if 'user' in session:
         return redirect(session['user'])
     if request.method == "POST":
