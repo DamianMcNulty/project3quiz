@@ -62,16 +62,23 @@ def login():
 
 @app.route('/user/<name>', methods=["GET", "POST"])
 def game(name):
-    if request.method == "POST" and request.form["answer"] == session['data'][session['question']]['answer']:
-        session['score'] += 1
-        session['question'] += 1
-        if(session['question'] == 5):
-            session['gameover'] = True
-        return redirect('/user/' + name)
-    if request.method == "POST" and request.form["answer"] != session['data'][session['question']]['answer']:
-        message = "Answer " + request.form["answer"] + " is incorrect, please try again."
-        flash(message)
-        return redirect('/user/' + name)
+    if request.method == "POST":
+        if request.form["skip"] == "skip":
+            session['question'] += 1
+            if(session['question'] == 5):
+                session['gameover'] = True
+            return redirect('/user/' + name)
+        else:
+            if request.form["answer"] == session['data'][session['question']]['answer']:
+                session['score'] += 1
+                session['question'] += 1
+                if(session['question'] == 5):
+                    session['gameover'] = True
+                return redirect('/user/' + name)
+            if request.form["answer"] != session['data'][session['question']]['answer']:
+                message = "Answer " + request.form["answer"] + " is incorrect, please try again."
+                flash(message)
+                return redirect('/user/' + name)
     return render_template("game.html", page_title = "Java Quiz", data= session['data'][session['question']], question = session['question'], year=datetime.now().year)
 
 

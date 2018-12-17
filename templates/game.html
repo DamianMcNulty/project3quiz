@@ -19,19 +19,24 @@
                     <div class="form-group floating-label-form-group controls">
                         <!-- <label for="question">Answer</label> -->
                         <input type="text" class="form-control" placeholder="Answer here" name="answer" id="answer"
-                            required data-validation-required-message="Please enter your answer.">
+                            >
                         <p class="help-block text-danger"></p>
                         {% with messages = get_flashed_messages() %} 
                             {% if messages %}
                                 <div class="alert alert-danger text-center">{{ messages[0] }}</div>
                             {% endif %} 
                         {% endwith %}
-                        <button type="submit" class="btn btn-default btn-success" id="sendAnswerButton">Submit</button>
+                        <div>
+                            <input type="submit" class="btn btn-default btn-success" id="sendAnswerButton" name="skip" value="Submit">
+                            <input type="submit" class="btn btn-default btn-success pull-right" name="skip" value="skip">
+                        </div>
                     </div>
                 </div>
             </form>
+            <form method="POST" name="sendSkip" id="skipForm">
+            </form>
         <footer>
-            <span class="pull-right">{{ question + 1 }} of {{ session['total'] }}</span>
+            <div class="text-center">{{ question + 1 }} of {{ session['total'] }}</div>
         </footer>
         {% else %}
             <h2 class="text-center">Game over</h2>
