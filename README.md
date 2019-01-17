@@ -64,7 +64,9 @@
 
 5.  [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-6.  [AdobeXD](https://www.adobe.com/ie/products/xd.html)
+6.  [Python 3.7](https://www.python.org/)
+
+7.  [AdobeXD](https://www.adobe.com/ie/products/xd.html)
 
 ## Local development
 

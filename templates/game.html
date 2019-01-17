@@ -1,10 +1,15 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="row mt10 mb10 landing">
+    <header class="text-center mb10">
+        <span class="Exit__button">Player: {{ session['user'] }}</span>
+        <span class="Exit__button">Score: {{ session['score'] }}</span>
+    </header>
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 Quiz__border">
-        <header>
-            <span>Player: {{ session['user'] }}</span>
-            <span class="pull-right">Score: {{ session['score'] }}</span>
-        </header>
+        <span class="pull-right">
+            {% if session['user'] %}
+                <a class="Exit__button" href="{{ url_for('logout') }}">Exit game</a>
+            {% endif %}
+        </span> 
         {% if session['gameover'] == False %}
             <form method="POST" name="sendAnswer" id="answerForm">
                 <p>{{ data.question }}</p>

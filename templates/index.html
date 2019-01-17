@@ -15,9 +15,15 @@
     <ol>
         <li>Press start</li>
         <li>Enter a username</li>
+        <li>Press play</li>
         <li>Answer each question</li>
         <li>Exit the game</li>
     </ol>
+    <div class="landing m0a mb10 w80-20vw">
+        {% if session['login'] %}
+            <a class="btn btn-default btn-success w100" href="{{ url_for('login') }}">Start</a>
+        {% endif %}
+    </div>
 </section>
 <br>
 <br>
