@@ -42,13 +42,13 @@
 
 ### User Stories
 
-1.  As a user I want to create a username so that I can play a game
-2.  As a user I want to submit my username so that I can start a game
-3.  As a user I want to solve a puzzle/coding challenge so that can I play a game
-4.  As a user I want to submit my answer to the puzzle/challenge so that I can play a game
-5.  As a user I want solve the next puzzle/challenge so that I can play a game
-6.  As a user I want to keep my score so that I know how I have played
-7.  As a user I want to view the leaderboard so that I can compare how I have played a game to other users
+1.  As a user, I want to create a username so that I can play a game
+2.  As a user, I want to submit my username so that I can start a game
+3.  As a user, I want to solve a coding challenge so that can I play a game
+4.  As a user, I want to submit my answer to the challenge so that I can play a game
+5.  As a user, I want solve the next challenge so that I can play a game
+6.  As a user, I want to keep my score so that I know how I have played
+7.  As a user, I want to view the leaderboard so that I can compare how I have played a game to other users
 
 ## Technologies Used
 
@@ -80,9 +80,9 @@ Windows
 
 Cloud9
 
-        pip3 install -r requirements.txt
-        export DEVELOPMENT=1
-        python3 runserver.py
+    pip3 install -r requirements.txt
+    export DEVELOPMENT=1
+    python3 runserver.py
 
 ## Research
 
@@ -94,14 +94,14 @@ Cloud9
 
 [(Back to top)](#table-of-contents)
 
-1.  sudo pip3 install flask
-2.  pip3 freeze --local > requirements.txt
-3.  heroku login
-4.  heroku create damianmcdev1-project3quiz --region eu
-5.  echo web: python runserver.py > Procfile
-6.  heroku config:set IP="0.0.0.0"
-7.  heroku config:set PORT="8080"
-8.  git push heroku master
+    sudo pip3 install flask
+    pip3 freeze --local > requirements.txt
+    heroku login
+    heroku create damianmcdev1-project3quiz --region eu
+    echo web: python runserver.py > Procfile
+    heroku config:set IP="0.0.0.0"
+    heroku config:set PORT="8080"
+    git push heroku master
 
 ## Credits
 
