@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="pr">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,10 @@
     <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}" />
 </head>
 
-<body class="ff mh100">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header"> 
-                <a href="/" class="navbar-brand">Java Quiz</a>  
-            </div>
-        </div>
-    </div>
-
-    <div class="container w100 fb">
+<body class="mh100">
+    <div class="container-fluid">
         {% block content %}{% endblock %}
-
     </div>
-
-    <footer class="black w100 ht6">
-        <p class="text-center">&copy; {{ year }} <a href="https://twitter.com/damianmcdev1">@damianmcdev1</a>     
-        </p>
-    </footer>
 
     <script src="/static/js/jquery-3.3.1.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
