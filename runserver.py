@@ -21,7 +21,7 @@ def index():
         title='Home Page',
         year=datetime.now().year,
     )
-    
+
 @app.route('/logout')
 def logout():
     for n in user:
