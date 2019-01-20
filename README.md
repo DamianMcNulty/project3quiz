@@ -10,14 +10,21 @@
 ## Table of Contents
 
 -   [Description](#description)
+
 -   [UX](#ux)
+
 -   [Technologies Used](#technologies-used)
+
 -   [Local Development](#local-development)
+
 -   [Deployment](#deployment)
+
 -   [Credits](#credits)
+
     -   [Content](#content)
     -   [Media](#media)
     -   [Acknowledgements](#acknowledgements)
+
 -   [LICENSE](#license)
 
 ## Description
@@ -72,13 +79,12 @@
 
 Windows
 
-```pip install virtualenv
+   pip install virtualenv
    python -m virtualenv env
    .\env\Scripts\activate
    pip install -r requirements.txt
    python runserver.py
    .\env\Scripts\deactivate
-```
 
 Cloud9
 

@@ -2,7 +2,7 @@ from os import environ, urandom
 import json
 from datetime import datetime
 
-from flask import Flask, render_template, request, flash, redirect, url_for, session
+from flask import Flask, render_template, request, flash, redirect, session
 
 app = Flask(__name__)
 
@@ -35,7 +35,7 @@ def logout():
         year=datetime.now().year,
         scores = user
     )
-    
+
 @app.route('/login', methods=["GET", "POST"])
 def login():
     session.pop('login', None)
