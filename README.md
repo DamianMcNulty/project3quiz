@@ -13,6 +13,8 @@
 
 -   [UX](#ux)
 
+-   [Architecture Diagram](#architecture-diagram)
+
 -   [Technologies Used](#technologies-used)
 
 -   [Local Development](#local-development)
@@ -62,6 +64,10 @@ see wireframes folder
 ### Design Demonstration
 
 <img src="https://github.com/DamianMcNulty/project3quiz/blob/master/wireframes/AdobeXDCC.gif" width=30% height=350px alt="Demonstration">
+
+## Architecture diagram
+
+<img src="https://github.com/DamianMcNulty/project3quiz/blob/master/wireframes/ArchitectureDiagram.png" width=100%  alt="Architecture">
 
 ## Technologies Used
 
