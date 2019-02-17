@@ -19,6 +19,8 @@
 
 -   [Local Development](#local-development)
 
+-   [Local Backend Testing](#local-backend-testing)
+
 -   [Cross Browser Testing](#cross-browser-testing)
 
 -   [Deployment](#deployment)
@@ -107,6 +109,12 @@ Cloud9
     pip3 install -r requirements.txt
     export DEVELOPMENT=1
     python3 runserver.py
+
+## Local Backend testing
+
+[(Back to top)](#table-of-contents)
+
+    python test.py
 
 ## Cross Browser testing
 
