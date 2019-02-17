@@ -53,6 +53,14 @@
 6.  As a user, I want to keep my score so that I know how I have played
 7.  As a user, I want to view the leaderboard so that I can compare how I have played a game to other users
 
+### Wireframes
+
+see wireframes folder
+
+### Design Demonstration
+
+<img src="https://github.com/DamianMcNulty/project4recipes/blob/master/wireframes/AdobeXDCC.gif" width=30% height=350px alt="Demonstration">
+
 ## Technologies Used
 
 [(Back to top)](#table-of-contents)
