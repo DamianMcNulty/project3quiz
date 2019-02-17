@@ -21,10 +21,6 @@
 
 -   [Credits](#credits)
 
-    -   [Content](#content)
-    -   [Media](#media)
-    -   [Acknowledgements](#acknowledgements)
-
 -   [LICENSE](#license)
 
 ## Description
@@ -71,7 +67,7 @@
 
 5.  [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-6.  [Python 3.7](https://www.python.org/)
+6.  [Python 3.6.8](https://www.python.org/)
 
 7.  [AdobeXD](https://www.adobe.com/ie/products/xd.html)
 
@@ -79,12 +75,12 @@
 
 Windows
 
-   pip install virtualenv
-   python -m virtualenv env
-   .\env\Scripts\activate
-   pip install -r requirements.txt
-   python runserver.py
-   .\env\Scripts\deactivate
+    pip install virtualenv
+    python -m virtualenv env
+    .\env\Scripts\activate
+    pip install -r requirements.txt
+    python runserver.py
+    .\env\Scripts\deactivate
 
 Cloud9
 
