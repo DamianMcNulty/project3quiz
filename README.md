@@ -17,6 +17,8 @@
 
 -   [Local Development](#local-development)
 
+-   [Cross Browser Testing](#cross-browser-testing)
+
 -   [Deployment](#deployment)
 
 -   [Credits](#credits)
@@ -59,7 +61,7 @@ see wireframes folder
 
 ### Design Demonstration
 
-<img src="https://github.com/DamianMcNulty/project4recipes/blob/master/wireframes/AdobeXDCC.gif" width=30% height=350px alt="Demonstration">
+<img src="https://github.com/DamianMcNulty/project3quiz/blob/master/wireframes/AdobeXDCC.gif" width=30% height=350px alt="Demonstration">
 
 ## Technologies Used
 
@@ -79,6 +81,10 @@ see wireframes folder
 
 7.  [AdobeXD](https://www.adobe.com/ie/products/xd.html)
 
+8.  [Online Converter](https://www.onlineconverter.com/mp4-to-gif)
+
+9.  [Cross Browser Testing](https://crossbrowsertesting.com/)
+
 ## Local development
 
 Windows
@@ -95,6 +101,12 @@ Cloud9
     pip3 install -r requirements.txt
     export DEVELOPMENT=1
     python3 runserver.py
+
+## Cross Browser testing
+
+[(Back to top)](#table-of-contents)
+
+see screenshots in cbt folder
 
 ## Research
 
