@@ -104,11 +104,10 @@ Windows
     python runserver.py
     .\env\Scripts\deactivate
 
-Cloud9
+## connect to database
 
-    pip3 install -r requirements.txt
-    export DEVELOPMENT=1
-    python3 runserver.py
+    pip install pymongo Flask-PyMongo
+    pip3 freeze --local > requirements.txt
 
 ## Local Backend testing
 

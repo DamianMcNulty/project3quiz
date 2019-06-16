@@ -1,12 +1,19 @@
 from os import environ, urandom
 import json
+from bson.json_util import dumps
 from datetime import datetime
 
 from flask import Flask, render_template, request, flash, redirect, session
 
+from flask_pymongo import PyMongo
+
 app = Flask(__name__)
 
-app.secret_key = urandom(24)
+app.secret_key = environ.get('SECRET_KEY')
+app.config["MONGO_DBNAME"] = environ.get('MONGO_DBNAME')
+app.config["MONGO_URI"] = environ.get('MONGO_URI')
+
+mongo = PyMongo(app)
 
 names = []
 user = []
@@ -14,8 +21,7 @@ user = []
 @app.route('/')
 def index():
     session['login'] = True
-    with open("data/data.json", "r") as json_data:
-        session['data'] = json.load(json_data)
+    session['data'] = json.loads(dumps(list(mongo.db.questions.find())))
     return render_template(
         'index.html',
         title='Home Page',
