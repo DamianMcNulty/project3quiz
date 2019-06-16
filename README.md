@@ -63,9 +63,7 @@
 
 see wireframes folder
 
-### Design Demonstration
-
-<img src="https://github.com/DamianMcNulty/project3quiz/blob/master/wireframes/AdobeXDCC.gif" width=30% height=350px alt="Demonstration">
+[Behance](https://www.behance.net/gallery/80996291/Java-Quiz) 
 
 ## Architecture diagram
 
