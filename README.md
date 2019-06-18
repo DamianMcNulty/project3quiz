@@ -124,6 +124,7 @@ see screenshots in cbt folder
 [(Back to top)](#table-of-contents)
 
 -   <https://www.reddit.com/r/learnpython/comments/1hsxxy/faviconico_get_request_in_flask/>
+-   <https://stackoverflow.com/questions/30333299/pymongo-bson-convert-python-cursor-cursor-object-to-serializable-json-object>
 
 ## Deployment
 
