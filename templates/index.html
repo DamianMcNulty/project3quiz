@@ -7,14 +7,10 @@
 <br>
 <br>
 <br>
-<h1 class="text-center">Java Quiz</h1>
+<h1 class="text-center" data-toggle="tooltip" title="Press Start">Java Quiz</h1>
 <br>
 <br>
 <section class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 Quiz__border">
-    <h2>Instructions</h2>
-    <ol>
-        <li>Press start</li>
-    </ol>
     <div class="landing m0a mb10 w80-20vw">
         {% if session['login'] %}
             <a class="btn btn-default btn-success w100" href="{{ url_for('login') }}">Start</a>
