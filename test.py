@@ -16,7 +16,7 @@ class FlaskTestCase(unittest.TestCase):
         response = tester.get('/', content_type='html/text')
         self.assertTrue(b'Java Quiz', response.data)
     
-    Given a user called f1 the user can play the game
+    #Given a user called f1 the user can play the game
     def test_index_username_login(self):
         tester = app.test_client(self)
         response = tester.post(
