@@ -34,30 +34,30 @@ class FlaskTestCase(unittest.TestCase):
         response = tester.get('/login', content_type='html/text')
         self.assertTrue(b'Play', response.data)
 
-    #Given a user called f1 the user can play the game
-    # def test_index_username_login(self):
-    #     tester = app.test_client(self)
-    #     response = tester.post(
-    #     '/login',
-    #     data=dict(name="f1"),
-    #     follow_redirects=True
-    #     )
-    #     self.assertTrue(b'Given the following code:', response.data)
+    #Given a user called f1 the user can play the quiz
+    def test_login_with_user(self):
+        tester = app.test_client(self)
+        response = tester.post(
+        '/login',
+        data=dict(name="f1"),
+        follow_redirects=True
+        )
+        self.assertTrue(b'Player: f1', response.data)
  
-    # Given a user called f1, another user called f1 can't play the game
-    # def test_username_login_again(self):
-    #     tester = app.test_client(self)
-    #     response = tester.post(
-    #     '/login',
-    #     data=dict(name="f1"),
-    #     follow_redirects=True
-    #     )
-    #     response = tester.post(
-    #     '/login',
-    #     data=dict(name="f1"),
-    #     follow_redirects=True
-    #     )
-    #     self.assertIn(b'The user name f1 is taken, try another username', response.data)
+    # Given a user called f1, another user called f1 can't play the quiz
+    def test_username_login_again(self):
+        tester = app.test_client(self)
+        response = tester.post(
+        '/login',
+        data=dict(name="f1"),
+        follow_redirects=True
+        )
+        response = tester.post(
+        '/login',
+        data=dict(name="f1"),
+        follow_redirects=True
+        )
+        self.assertIn(b'The user name f1 is taken, try another username', response.data)
   
     # leaderboard.html contains 'Leaderboard'
     # def test_leaderboard_name(self):
