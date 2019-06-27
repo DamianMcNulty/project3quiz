@@ -58,44 +58,24 @@ class FlaskTestCase(unittest.TestCase):
         follow_redirects=True
         )
         self.assertIn(b'The user name f1 is taken, try another username', response.data)
-  
-    # leaderboard.html contains 'Leaderboard'
-    # def test_leaderboard_name(self):
+    
+    # logout route works ok
+    # def test_logout(self):
     #     tester = app.test_client(self)
     #     response = tester.get('/logout', content_type='html/text')
-    #     self.assertTrue(b'Leaderboard', response.data)
-
-    # leaderboard route works ok
-    # def test_leaderboard(self):
-    #     tester = app.test_client(self)
-    #     response = tester.get('/leaderboard', content_type='html/text')
     #     self.assertEqual(response.status_code, 200)
 
-    # user f1 appears in welcome message after login
-    # def test_leaderboard_user(self):
-    #     tester = app.test_client(self)
-    #     response = tester.post(
-    #     '/login',
-    #     data=dict(name="f1"),
-    #     follow_redirects=True
-    #     )
-    #     self.assertIn(b'f1', response.data)
+    # leaderboard.html contains 'Leaderboard'
+    def test_leaderboard_name(self):
+        tester = app.test_client(self)
+        response = tester.get('/logout', content_type='html/text')
+        self.assertTrue(b'Leaderboard', response.data)
   
     # game.html works ok
     # def test_game(self):
     #     tester = app.test_client(self)
     #     response = tester.get('/game', content_type='html/text')
     #     self.assertEqual(response.status_code, 200)
-
-     # Given a user called f1 the user can play the game
-    # def test_game_question_num(self):
-    #     tester = app.test_client(self)
-    #     response = tester.post(
-    #     '/login',
-    #     data=dict(name="f2"),
-    #     follow_redirects=True
-    #     )
-    #     self.assertIn(b'question 2', response.data)
 
      # A user answers the first question with the answer D
     # def test_game_answer(self):
@@ -105,7 +85,7 @@ class FlaskTestCase(unittest.TestCase):
     #     data=dict(answer="D"),
     #     follow_redirects=True
     #     )
-    #     self.assertIn(b'question 2', response.data)
+    #     self.assertTrue(b'question 2', response.data)
 
      # A user answers the first 2 questions and the user's leaderboard score is 2
     # def test_leaderboard_score(self):
