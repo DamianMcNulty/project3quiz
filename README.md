@@ -95,6 +95,11 @@ see wireframes folder
 
 Windows
 
+    setx /m DEVELOPMENT True
+    setx /m SECRET_KEY "..."
+    setx /m MONGO_DBNAME "..."
+    setx /m MONGO_URI "..."
+    setx /m PORT 8080
     pip install virtualenv
     python -m virtualenv env
     .\env\Scripts\activate
