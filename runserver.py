@@ -69,7 +69,7 @@ def login():
 @app.route('/user/<name>', methods=["GET", "POST"])
 def game(name):
     if request.method == "POST":
-        if request.form["skip"] == "skip":
+        if request.form["skip"] == "Next":
             if(session['question'] == 4):
                 session['gameover'] = True
             session['question'] += 1
