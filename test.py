@@ -24,7 +24,7 @@ class FlaskTestCase(unittest.TestCase):
         data=dict(name="f1"),
         follow_redirects=True
         )
-        self.assertIn(b'Player: f1', response.data)
+        self.assertIn(b'Given the following code:', response.data)
  
     # Given a user called f1, another user called f1 can't play the game
     # def test_username_login_again(self):
