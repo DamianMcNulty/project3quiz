@@ -35,14 +35,14 @@ class FlaskTestCase(unittest.TestCase):
         self.assertTrue(b'Play', response.data)
 
     #Given a user called f1 the user can play the quiz
-    def test_login_with_user(self):
-        tester = app.test_client(self)
-        response = tester.post(
-        '/login',
-        data=dict(name="f1"),
-        follow_redirects=True
-        )
-        self.assertTrue(b'Player: f1', response.data)
+    # def test_login_with_user(self):
+    #     tester = app.test_client(self)
+    #     response = tester.post(
+    #     '/login',
+    #     data=dict(name="f1"),
+    #     follow_redirects=True
+    #     )
+    #     self.assertTrue(b'Player: f1', response.data)
  
     # Given a user called f1, another user called f1 can't play the quiz
     def test_username_login_again(self):
