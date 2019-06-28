@@ -45,19 +45,19 @@ class FlaskTestCase(unittest.TestCase):
     #     self.assertTrue(b'Player: f1', response.data)
  
     # Given a user called f1, another user called f1 can't play the quiz
-    def test_username_login_again(self):
-        tester = app.test_client(self)
-        response = tester.post(
-        '/login',
-        data=dict(name="f1"),
-        follow_redirects=True
-        )
-        response = tester.post(
-        '/login',
-        data=dict(name="f1"),
-        follow_redirects=True
-        )
-        self.assertIn(b'The user name f1 is taken, try another username', response.data)
+    # def test_username_login_again(self):
+    #     tester = app.test_client(self)
+    #     response = tester.post(
+    #     '/login',
+    #     data=dict(name="f1"),
+    #     follow_redirects=True
+    #     )
+    #     response = tester.post(
+    #     '/login',
+    #     data=dict(name="f1"),
+    #     follow_redirects=True
+    #     )
+    #     self.assertIn(b'The user name f1 is taken, try another username', response.data)
     
     # logout route works ok
     # def test_logout(self):
