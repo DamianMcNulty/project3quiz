@@ -24,7 +24,7 @@ def index():
     session['data'] = json.loads(dumps(list(mongo.db.questions.find())))
     return render_template(
         'index.html',
-        title='Home Page',
+        title='Start',
         year=datetime.now().year,
     )
 
@@ -51,7 +51,7 @@ def login():
         if request.form["name"] in names:
             message = "The user name " + request.form["name"] + " is taken, try another username"
             flash(message)
-            return render_template('login.html', title='Home Page', year=datetime.now().year)
+            return render_template('login.html', title='Login in to play', year=datetime.now().year)
         else:
             names.append(request.form["name"])
             session['user'] = request.form["name"]
@@ -62,7 +62,7 @@ def login():
         return redirect('/user/' + session['user'])
     return render_template(
         'login.html',
-        title='Login',
+        title='Login to',
         year=datetime.now().year,
     )
 
@@ -85,7 +85,7 @@ def game(name):
                 message = "Answer " + request.form["answer"] + " is incorrect, please try again."
                 flash(message)
                 return redirect('/user/' + name)
-    return render_template("game.html", page_title = "Java Quiz", data= session['data'][session['question']], question = session['question'], year=datetime.now().year)
+    return render_template("game.html", title = "Question " + str(session['question'] + 1), data= session['data'][session['question']], question = session['question'], year=datetime.now().year)
 
 
 if environ.get('DEVELOPMENT'):
