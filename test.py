@@ -68,6 +68,12 @@ class FlaskTestCase(unittest.TestCase):
     # leaderboard.html contains 'Leaderboard'
     def test_leaderboard_name(self):
         tester = app.test_client(self)
+        response = tester.post(
+        '/login',
+        data=dict(name="f1"),
+        follow_redirects=True
+        )
+        tester = app.test_client(self)
         response = tester.get('/logout', content_type='html/text')
         self.assertTrue(b'Leaderboard', response.data)
   
