@@ -60,22 +60,21 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b'The user name f1 is taken, try another username', response.data)
     
     # logout route works ok
-    def test_logout(self):
-        tester = app.test_client(self)
-        response = tester.get('/logout', content_type='html/text')
-        self.assertTrue(response.status_code, 200)
+    # def test_logout(self):
+    #     tester = app.test_client(self)
+    #     response = tester.get('/logout', content_type='html/text')
+    #     self.assertTrue(response.status_code, 200)
 
     # leaderboard.html contains 'Leaderboard'
-    def test_leaderboard_name(self):
-        tester = app.test_client(self)
-        response = tester.post(
-        '/login',
-        data=dict(name="f1"),
-        follow_redirects=True
-        )
-        tester = app.test_client(self)
-        response = tester.get('/logout', content_type='html/text')
-        self.assertTrue(b'Leaderboard', response.data)
+    # def test_leaderboard_name(self):
+    #     tester = app.test_client(self)
+    #     response = tester.post(
+    #     '/login',
+    #     data=dict(name="f1"),
+    #     follow_redirects=True
+    #     )
+    #     response = tester.get('/logout', content_type='html/text')
+    #     self.assertTrue(b'Leaderboard', response.data)
   
     # game.html works ok
     def test_game(self):
