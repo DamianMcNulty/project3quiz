@@ -10,25 +10,67 @@
 
 <h2 class="text-center">{{ title }}</h2>
 <style type="text/css">
-    .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
-    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
-    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
-    .tg .tg-us36{border-color:inherit;vertical-align:top}
-    .tg .tg-ov9q{background-color:#D2E4FC;border-color:inherit;vertical-align:top}
-    </style>
-    <div class="row">
-        <table class="leaderboard tg col-xs-12 col-sm-offset-4 col-sm-4">
-            <tr>
-                <th class="tg-us36">Username</th>
-                <th class="tg-us36">Score</th>
-            </tr>
-          {% for user in scores|sort(reverse=True, attribute='score') %}
-          <tr>
-            <td class="tg-ov9q">{{ user['name'] }}</td>
-            <td class="tg-ov9q">{{ user['score'] }}</td>
-          </tr>
-          {% endfor %}
-        </table>
-    </div>
+  .tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: #999;
+  }
+
+  .tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #999;
+    color: #444;
+    background-color: #F7FDFA;
+  }
+
+  .tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #999;
+    color: #fff;
+    background-color: #26ADE4;
+  }
+
+  .tg .tg-us36 {
+    border-color: inherit;
+    vertical-align: top
+  }
+
+  .tg .tg-ov9q {
+    background-color: #D2E4FC;
+    border-color: inherit;
+    vertical-align: top
+  }
+</style>
+<div class="row">
+  <table class="leaderboard tg col-xs-12 col-sm-offset-4 col-sm-4">
+    <thead>
+      <tr>
+        <th class="tg-us36">Username</th>
+        <th class="tg-us36">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in scores|sort(reverse=True, attribute='score') %}
+      <tr>
+        <td class="tg-ov9q">{{ user['name'] }}</td>
+        <td class="tg-ov9q">{{ user['score'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 {% endblock %}
