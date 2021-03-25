@@ -1,7 +1,6 @@
 # Project 3 Flask application
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cc421fa0070d4d5e903bc9cb4c055aca)](https://app.codacy.com/gh/DamianMcNulty/project3quiz?utm_source=github.com&utm_medium=referral&utm_content=DamianMcNulty/project3quiz&utm_campaign=Badge_Grade_Settings)
-| <a href="https://github.com/DamianMcNulty/project3quiz/stargazers">     <img src="https://img.shields.io/github/stars/DamianMcNulty/project3quiz.svg?style=social" alt="GitHub stars"> </a> | [![Travis CI Testing](https://travis-ci.org/DamianMcNulty/project3quiz.svg?branch=master)](https://travis-ci.org/DamianMcNulty/project3quiz) |
+| <a href="https://github.com/DamianMcNulty/project3quiz/stargazers">     <img src="https://img.shields.io/github/stars/DamianMcNulty/project3quiz.svg?style=social" alt="GitHub stars"> </a> | [![Travis CI Testing](https://travis-ci.org/DamianMcNulty/project3quiz.svg?branch=master)](https://travis-ci.org/DamianMcNulty/project3quiz) | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cc421fa0070d4d5e903bc9cb4c055aca)](https://app.codacy.com/gh/DamianMcNulty/project3quiz?utm_source=github.com&utm_medium=referral&utm_content=DamianMcNulty/project3quiz&utm_campaign=Badge_Grade_Settings)
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Goal
@@ -92,6 +91,7 @@ see wireframes folder
 
 9.  [Cross Browser Testing](https://crossbrowsertesting.com/)
 
+
 ## Local development
 
 Windows
@@ -118,6 +118,10 @@ Windows
 [(Back to top)](#table-of-contents)
 
     python test.py
+    pip install coverage
+    coverage run --include=./runserver.py test.py
+    coverage report
+    coverage html
 
 ## Cross Browser testing
 
