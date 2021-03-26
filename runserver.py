@@ -53,6 +53,8 @@ def login():
             flash(message)
             return render_template('login.html', title='Login in to play', year=datetime.now().year)
         else:
+            if(request.form["name"] == ""):
+                return redirect('/')
             names.append(request.form["name"])
             session['user'] = request.form["name"]
             session['score'] = 0

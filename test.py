@@ -34,7 +34,17 @@ class FlaskTestCase(unittest.TestCase):
         response = tester.get('/login', content_type='html/text')
         self.assertTrue(b'Play', response.data)
 
-    #Given a user called f1 the user can play the quiz
+    #Given a user presses the play button without entering a username
+    def test_login_with_user(self):
+        tester = app.test_client(self)
+        response = tester.post(
+        '/login',
+        data=dict(name=""),
+        follow_redirects=True
+        )
+        self.assertTrue(b'Start', response.data)
+    
+     #Given a user called f1 the user can play the quiz
     # def test_login_with_user(self):
     #     tester = app.test_client(self)
     #     response = tester.post(
