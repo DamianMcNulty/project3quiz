@@ -42,7 +42,7 @@ class FlaskTestCase(unittest.TestCase):
         data=dict(name=""),
         follow_redirects=True
         )
-        self.assertTrue(b'Play', response.data)
+        self.assertTrue(b'You have not entered a username, please try again.', response.data)
     
      #Given a user called f1 the user can play the quiz
     # def test_login_with_user(self):

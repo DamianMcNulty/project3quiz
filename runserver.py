@@ -54,6 +54,8 @@ def login():
             return render_template('login.html', title='Login in to play', year=datetime.now().year)
         else:
             if(request.form["name"] == ""):
+                message = "You have not entered a username, please try again."
+                flash(message)
                 return redirect('/login')
             names.append(request.form["name"])
             session['user'] = request.form["name"]
