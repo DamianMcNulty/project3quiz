@@ -89,7 +89,6 @@ def game(name):
                 message = "Answer " + request.form["answer"] + " is incorrect, please try again."
                 flash(message)
                 return redirect('/user/' + name)
-    print()
     return render_template("game.html", title = "Question " + str(session['question'] + 1), data = session['data'][session['question']], question = session['question'], year=datetime.now().year)
 
 
