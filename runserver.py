@@ -54,7 +54,7 @@ def login():
             return render_template('login.html', title='Login in to play', year=datetime.now().year)
         else:
             if(request.form["name"] == ""):
-                return redirect('/')
+                return redirect('/login')
             names.append(request.form["name"])
             session['user'] = request.form["name"]
             session['score'] = 0
@@ -87,7 +87,8 @@ def game(name):
                 message = "Answer " + request.form["answer"] + " is incorrect, please try again."
                 flash(message)
                 return redirect('/user/' + name)
-    return render_template("game.html", title = "Question " + str(session['question'] + 1), data= session['data'][session['question']], question = session['question'], year=datetime.now().year)
+    print()
+    return render_template("game.html", title = "Question " + str(session['question'] + 1), data = session['data'][session['question']], question = session['question'], year=datetime.now().year)
 
 
 if environ.get('DEVELOPMENT'):

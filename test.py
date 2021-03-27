@@ -35,7 +35,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertTrue(b'Play', response.data)
 
     #Given a user presses the play button without entering a username
-    def test_login_with_user(self):
+    def test_login_with_no_user(self):
         tester = app.test_client(self)
         response = tester.post(
         '/login',
