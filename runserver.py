@@ -79,6 +79,10 @@ def game(name):
             session['question'] += 1
             return redirect('/user/' + name)
         else:
+            if request.form["answer"] == "":
+                message = "You have not given an answer, please try again."
+                flash(message)
+                return redirect('/user/' + name)
             if request.form["answer"] == session['data'][session['question']]['answer']:
                 if(session['question'] == 4):
                     session['gameover'] = True
