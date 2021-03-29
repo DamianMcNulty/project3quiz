@@ -93,6 +93,10 @@ see wireframes folder
 
 10.  [Coverage](https://coverage.readthedocs.io/en/coverage-5.5/#)
 
+11.  [JQuery 3.6.0](https://jquery.com/)
+
+12.  [DataTables 1.10.24](https://github.com/DataTables/DataTables)
+
 
 ## Local development
 
