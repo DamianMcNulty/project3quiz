@@ -8,7 +8,7 @@
 <br>
 <br>
 
-<h2 class="text-center">{{ title }}</h2>
+<h2 class="text-center">{{title}}</h2>
 <style type="text/css">
   .tg {
     border-collapse: collapse;
@@ -54,23 +54,25 @@
     vertical-align: top
   }
 </style>
-<div class="row">
-  <table class="leaderboard tg col-xs-12 col-sm-offset-4 col-sm-4">
-    <thead>
-      <tr>
-        <th class="tg-us36">Username</th>
-        <th class="tg-us36">Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for user in scores|sort(reverse=True, attribute='score') %}
-      <tr>
-        <td class="tg-ov9q">{{ user['name'] }}</td>
-        <td class="tg-ov9q">{{ user['score'] }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<div class="container">
+  <div class="row">
+    <table class="leaderboard tg col-xs-12 col-sm-offset-4 col-sm-4">
+      <thead>
+        <tr>
+          <th class="tg-us36">Username</th>
+          <th class="tg-us36">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in scores|sort(reverse=True, attribute='score') %}
+        <tr>
+          <td class="tg-ov9q">{{ user['name'] }}</td>
+          <td class="tg-ov9q">{{ user['score'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
-
+<a class="m0a db text-center" href="{{ url_for('index') }}">Click here to play again</a>
 {% endblock %}

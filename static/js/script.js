@@ -1,6 +1,8 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
     $('.leaderboard').DataTable( {
+        searching: false,
+        paging: false,
         fixedHeader: true,
         responsive: true,
         "iDisplayLength": 5,

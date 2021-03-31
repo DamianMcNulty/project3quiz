@@ -20,6 +20,7 @@ user = []
 
 @app.route('/')
 def index():
+    session.pop('user', None)
     session['login'] = True
     session['data'] = json.loads(dumps(list(mongo.db.questions.find())))
     return render_template(
@@ -34,7 +35,6 @@ def logout():
         if n['name'] == session['user']:
           user.remove(n)
     user.append({"name": session['user'], "score": session['score']})
-    session.pop('user', None)
     return render_template(
         'leaderboard.html',
         title='Leaderboard',
@@ -46,7 +46,7 @@ def logout():
 def login():
     session.pop('login', None)
     if 'user' in session:
-        return redirect(session['user'])
+        return redirect('/user/' + session['user'])
     if request.method == "POST":
         if request.form["name"] in names:
             message = "The user name " + request.form["name"] + " is taken, try another username"
