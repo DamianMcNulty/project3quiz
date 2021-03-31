@@ -7,35 +7,9 @@
 
 > To create a Quiz Game using a python and flask web application
 
-## Table of Contents
-
--   [Description](#description)
-
--   [UX](#ux)
-
--   [Architecture Diagram](#architecture-diagram)
-
--   [Technologies Used](#technologies-used)
-
--   [Local Development](#local-development)
-
--   [Local Backend Testing](#local-backend-testing)
-
--   [Cross Browser Testing](#cross-browser-testing)
-
--   [Deployment](#deployment)
-
--   [Credits](#credits)
-
--   [LICENSE](#license)
-
 ## Description
 
-[(Back to top)](#table-of-contents)
-
 ## UX
-
-[(Back to top)](#table-of-contents)
 
 ### Game
 
@@ -71,19 +45,17 @@ see wireframes folder
 
 ## Technologies Used
 
-[(Back to top)](#table-of-contents)
-
 1.  [HTML5](https://en.wikipedia.org/wiki/HTML5) 
 
 2.  [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)  
 
-3.  [Git](https://git-scm.com/)  
+3.  [Git](https://git-scm.com/)
 
 4.  [Github](https://github.com/)
 
 5.  [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-6.  [Python 3.6.8](https://www.python.org/)
+6.  [Python 3.9.1](https://www.python.org/)
 
 7.  [AdobeXD](https://www.adobe.com/ie/products/xd.html)
 
@@ -91,11 +63,11 @@ see wireframes folder
 
 9.  [Cross Browser Testing](https://crossbrowsertesting.com/)
 
-10.  [Coverage](https://coverage.readthedocs.io/en/coverage-5.5/#)
+10. [Coverage](https://coverage.readthedocs.io/en/coverage-5.5/#)
 
-11.  [JQuery 3.6.0](https://jquery.com/)
+11. [JQuery 3.6.0](https://jquery.com/)
 
-12.  [DataTables 1.10.24](https://github.com/DataTables/DataTables)
+12. [DataTables 1.10.24](https://github.com/DataTables/DataTables)
 
 
 ## Local development
@@ -121,8 +93,6 @@ Windows
 
 ## Local Backend testing
 
-[(Back to top)](#table-of-contents)
-
     python test.py
     pip install coverage
     coverage run --include=./runserver.py test.py
@@ -131,20 +101,14 @@ Windows
 
 ## Cross Browser testing
 
-[(Back to top)](#table-of-contents)
-
 see screenshots in cbt folder
 
 ## Research
-
-[(Back to top)](#table-of-contents)
 
 -   <https://www.reddit.com/r/learnpython/comments/1hsxxy/faviconico_get_request_in_flask/>
 -   <https://stackoverflow.com/questions/30333299/pymongo-bson-convert-python-cursor-cursor-object-to-serializable-json-object>
 
 ## Deployment
-
-[(Back to top)](#table-of-contents)
 
     sudo pip3 install flask
     pip3 freeze --local > requirements.txt
@@ -156,8 +120,6 @@ see screenshots in cbt folder
     git push heroku master
 
 ## Credits
-
-[(Back to top)](#table-of-contents)
 
 ## License
 
