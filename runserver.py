@@ -29,8 +29,10 @@ def index():
         year=datetime.now().year,
     )
 
-@app.route('/logout')
-def logout():
+@app.route('/leaderboard')
+def leaderboard():
+    if 'user' not in session:
+        return redirect('/')
     for n in user:
         if n['name'] == session['user']:
           user.remove(n)
