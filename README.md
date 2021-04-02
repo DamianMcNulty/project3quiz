@@ -39,10 +39,6 @@ see wireframes folder
 
 [Behance](https://www.behance.net/gallery/80996291/Java-Quiz) 
 
-## Architecture diagram
-
-<img src="https://github.com/DamianMcNulty/project3quiz/blob/master/wireframes/ArchitectureDiagram.png" width=100%  alt="Architecture">
-
 ## Technologies Used
 
 1.  [HTML5](https://en.wikipedia.org/wiki/HTML5)
