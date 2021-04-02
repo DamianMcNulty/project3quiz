@@ -72,6 +72,8 @@ def login():
 
 @app.route('/user/<name>', methods=["GET", "POST"])
 def game(name):
+    if 'user' not in session:
+        return redirect('/')
     if request.method == "POST":
         if request.form["skip"] == "Next":
             if(session['question'] == 4):
