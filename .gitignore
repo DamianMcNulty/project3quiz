@@ -4,3 +4,4 @@ htmlcov
 .coverage
 .vscode
 utils
+node_modules
