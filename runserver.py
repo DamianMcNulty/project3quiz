@@ -1,4 +1,4 @@
-from os import environ, urandom
+from os import environ
 import json
 from bson.json_util import dumps
 from datetime import datetime
