@@ -17,7 +17,7 @@ mongo = PyMongo(app)
 
 names = []
 user = []
-max = 5
+number_of_questions = 5
 
 @app.route('/')
 def index():
@@ -64,7 +64,7 @@ def login():
             session['user'] = request.form["name"]
             session['score'] = 0
             session['question'] = 0
-            session['total'] = max + 1
+            session['total'] = number_of_questions + 1
             session['gameover'] = False
         return redirect('/user/' + session['user'])
     return render_template(
@@ -79,7 +79,7 @@ def game(name):
         return redirect('/')
     if request.method == "POST":
         if request.form["skip"] == "Next":
-            if(session['question'] == max):
+            if(session['question'] == number_of_questions):
                 session['gameover'] = True
             session['question'] += 1
             return redirect('/user/' + name)
