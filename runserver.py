@@ -89,7 +89,7 @@ def game(name):
                 flash(message)
                 return redirect('/user/' + name)
             if request.form["answer"] == session['data'][session['question']]['answer']:
-                if(session['question'] == max):
+                if(session['question'] == number_of_questions):
                     session['gameover'] = True
                 session['score'] += 1
                 session['question'] += 1
