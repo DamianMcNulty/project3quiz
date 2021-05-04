@@ -11,27 +11,13 @@
 
 ## UX
 
-### Game
-
-1.  The user enters a username and submits a form
-2.  The user name is checked for uniqueness
-3.  The user must enter a username to play a game
-4.  The user is presented with a riddle
-5.  The user enters their answer into a textarea
-6.  The user submits the answer using a form
-7.  If the answer is correct the next riddle is presented
-8.  If the answer is incorrect the guess is stored and printed below the riddle and the textarea is cleared
-9.  Top scores for all users are displayed in a leaderboard
-
 ### User Stories
 
-1.  As a user, I want to create a username so that I can play a game
-2.  As a user, I want to submit my username so that I can start a game
-3.  As a user, I want to solve a coding challenge so that can I play a game
-4.  As a user, I want to submit my answer to the challenge so that I can play a game
-5.  As a user, I want solve the next challenge so that I can play a game
-6.  As a user, I want to keep my score so that I know how I have played
-7.  As a user, I want to view the leaderboard so that I can compare how I have played a game to other users
+1.  As a user, I want to create a username which is between 6 and 10 letters or digits long, does not contain spaces and does not begin with a digit so that I can submit my username to start a game.
+2.  As a user, I want to solve a coding challenge and check my answer so that I can score a point
+3.  As a user, I want solve the next challenge or finish the game
+4.  As a user, I want to know how my score as I play the game
+5.  As a user, I want to view the leaderboard so that I can compare how I have played a game to other users
 
 ### Wireframes
 
