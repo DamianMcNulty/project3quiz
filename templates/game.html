@@ -24,7 +24,7 @@
                     <p>
                         {% for answer in data.answers %}
                             {{ answer }}
-                            <input type="submit" class="btn btn-default btn-success" id="sendAnswerButton" name="skip" value={{ answer }}><br />
+                            <input type="radio" class="btn btn-default btn-success" id="sendAnswerButton" name="skip" value={{ answer }}><br />
                         {% endfor %}
                     </p>
                     <div class="form-group floating-label-form-group controls">
