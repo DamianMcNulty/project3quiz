@@ -23,7 +23,7 @@
                 <div class="control-group">
                     <p>
                         {% for answer in data.answers %}
-                            {{ answer }}<br /> 
+                            <input type="submit" class="btn btn-default btn-success" id="sendAnswerButton" name="skip" value={{ answer }}><br />
                         {% endfor %}
                     </p>
                     <div class="form-group floating-label-form-group controls">
@@ -37,7 +37,6 @@
                             {% endif %} 
                         {% endwith %}
                         <div>
-                            <input type="submit" class="btn btn-default btn-success" id="sendAnswerButton" name="skip" value="Submit">
                             <input type="submit" class="btn btn-default btn-success pull-right" name="skip" value="Next">
                         </div>
                     </div>
