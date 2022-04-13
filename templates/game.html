@@ -5,7 +5,7 @@
                 <img src="{{ session['data'][session['question']].url2 }}" class="w100">
         </div>
     </div>
-    <div class="col-sm-6 Quiz__border">
+    <div class="col-sm-6">
         <header class="text-center">
             <span class="Exit__button fs2">Player: {{ session['user'] }}</span>
             <span class="Exit__button fs2">Score: {{ session['score'] }}</span>
@@ -24,7 +24,7 @@
                     <p>
                         {% for answer in data.answers %}
                             {{ answer }}
-                            <input type="radio" class="btn btn-default btn-success pull-right" id="sendAnswerButton" name="skip" value={{ answer }}><br />
+                            <input type="radio" class="btn btn-default btn-success pull-right" id="sendAnswerButton" name="skip" value={{ answer }}><br /> <br />
                         {% endfor %}
                     </p>
                     <div class="form-group floating-label-form-group controls">
