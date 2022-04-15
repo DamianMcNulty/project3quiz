@@ -1,6 +1,6 @@
 # Project 3 Flask application
 
-| <a href="https://github.com/DamianMcNulty/project3quiz/stargazers">     <img src="https://img.shields.io/github/stars/DamianMcNulty/project3quiz.svg?style=social" alt="GitHub stars"> </a> | [![CircleCI](https://circleci.com/gh/DamianMcNulty/project3quiz/tree/master.svg?style=svg)](https://circleci.com/gh/DamianMcNulty/project3quiz/tree/master) | 
+| <a href="https://github.com/DamianMcNulty/project3quiz/stargazers">     <img src="https://img.shields.io/github/stars/DamianMcNulty/project3quiz.svg?style=social" alt="GitHub stars"> </a> | [![CircleCI](https://circleci.com/gh/DamianMcNulty/project3quiz/tree/master.svg?style=shield)](https://circleci.com/gh/DamianMcNulty/project3quiz/tree/master) | 
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Goal
