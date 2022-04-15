@@ -1,7 +1,6 @@
 from runserver import app
 import unittest
 
-
 class FlaskTestCase(unittest.TestCase):
 
      # Ensure that flask was set up correctly
