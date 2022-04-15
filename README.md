@@ -69,10 +69,6 @@ Windows
     coverage report
     coverage html
 
-## Cross Browser testing
-
-see screenshots in cbt folder
-
 ## Research
 
 -   <https://www.reddit.com/r/learnpython/comments/1hsxxy/faviconico_get_request_in_flask/>
