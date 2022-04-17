@@ -29,16 +29,11 @@ see wireframes folder
 
 1.  [HTML5](https://en.wikipedia.org/wiki/HTML5)
 2.  [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-3.  [Git](https://git-scm.com/)
-4.  [Github](https://github.com/)
-5.  [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-6.  [Python 3.9.1](https://www.python.org/)
-7.  [AdobeXD](https://www.adobe.com/ie/products/xd.html)
-8.  [Online Converter](https://www.onlineconverter.com/mp4-to-gif)
-9.  [Cross Browser Testing](https://crossbrowsertesting.com/)
-10. [Coverage](https://coverage.readthedocs.io/en/coverage-5.5/#)
-11. [JQuery 3.6.0](https://jquery.com/)
-12. [DataTables 1.10.24](https://github.com/DataTables/DataTables)
+3.  [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+4.  [Python 3.9.1](https://www.python.org/)
+5. [Coverage](https://coverage.readthedocs.io/en/coverage-5.5/#)
+6. [JQuery 3.6.0](https://jquery.com/)
+7. [DataTables 1.10.24](https://github.com/DataTables/DataTables)
 
 ## Local development
 
