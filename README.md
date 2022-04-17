@@ -21,8 +21,6 @@
 
 ### Wireframes
 
-see wireframes folder
-
 [Behance](https://www.behance.net/gallery/80996291/Java-Quiz) 
 
 ## Technologies Used
