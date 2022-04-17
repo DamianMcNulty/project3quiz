@@ -24,13 +24,10 @@
                     <p>
                         {% for answer in data.answers %}
                             {{ answer }}
-                            <input type="radio" class="btn btn-default btn-success pull-right" id="sendAnswerButton" name="skip" value={{ answer }}><br /> <br />
+                            <input type="radio" class="btn btn-default btn-success pull-right" id="answer" name="answer" value={{ answer }}><br /> <br />
                         {% endfor %}
                     </p>
                     <div class="form-group floating-label-form-group controls">
-                        <!-- <label for="question">Answer</label> -->
-                        <input type="hidden" class="form-control" placeholder="Answer here" name="answer" id="answer"
-                            >
                         <p class="help-block text-danger"></p>
                         {% with messages = get_flashed_messages() %} 
                             {% if messages %}
