@@ -205,7 +205,7 @@ html {
   
 \*****************************************/
 .landing {
-  animation: intro 1s forwards 0s ease-in;
+  animation: intro 0.2s forwards 0s ease-in;
 }
 
 /*****************************************\
