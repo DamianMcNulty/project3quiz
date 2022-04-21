@@ -23,9 +23,12 @@
                 <div class="control-group">
                         {% for answer in data.answers %}
                             <p class="Quiz__border">
-                                {{ answer }}
-                                <input type="radio" class="btn btn-default btn-success pull-right" id="answer-{{ answer }}" name="answer" value={{ answer }}><br /> <br />
+                                <label>
+                                    {{ answer }}
+                                    <input type="radio" class="btn btn-default btn-success pull-right" id="answer-{{ answer }}" name="answer" value={{ answer }}><br /> 
+                                </label>
                             </p>
+                            <br />
                         {% endfor %}
                     
                     <div class="form-group floating-label-form-group controls">
