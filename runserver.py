@@ -84,17 +84,17 @@ def game(name):
             session['question'] += 1
             return redirect('/user/' + name)
         else:
-            if request.form.getlist('answer') == "":
+            if request.form["answer"] == "":
                 message = "You have not given an answer, please try again."
                 flash(message)
                 return redirect('/user/' + name)
-            if request.form.getlist('answer') == session['data'][session['question']]['answer']:
+            if request.form["answer"] == session['data'][session['question']]['answer']:
                 if(session['question'] == number_of_questions):
                     session['gameover'] = True
                 session['score'] += 1
                 session['question'] += 1
                 return redirect('/user/' + name)
-            if request.form.getlist('answer') != session['data'][session['question']]['answer']:
+            if request.form["answer"] != session['data'][session['question']]['answer']:
                 message = "Answer " + request.form["answer"] + " is incorrect, please try again."
                 flash(message)
                 return redirect('/user/' + name)
