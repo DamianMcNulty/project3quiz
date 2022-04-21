@@ -224,6 +224,7 @@ html {
 \*****************************************/
 .Quiz__border {
   border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
 }
 
 .Exit__button {
