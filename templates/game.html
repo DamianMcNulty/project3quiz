@@ -21,12 +21,13 @@
                 
                 </p>{{ data.code }}</p>
                 <div class="control-group">
-                    <p class="Quiz__border">
                         {% for answer in data.answers %}
-                            {{ answer }}
-                            <input type="radio" class="btn btn-default btn-success pull-right" id="answer" name="answer" value={{ answer }}><br /> <br />
+                            <p class="Quiz__border">
+                                {{ answer }}
+                                <input type="radio" class="btn btn-default btn-success pull-right" id="answer-{{ answer }}" name="answer" value={{ answer }}><br /> <br />
+                            </p>
                         {% endfor %}
-                    </p>
+                    
                     <div class="form-group floating-label-form-group controls">
                         <p class="help-block text-danger"></p>
                         {% with messages = get_flashed_messages() %} 
