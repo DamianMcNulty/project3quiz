@@ -78,6 +78,14 @@ def game(name):
     if 'user' not in session:
         return redirect('/')
     if request.method == "POST":
+        if request.form["answer"] == "":
+            message = "You have not given an answer, please try again."
+            flash(message)
+            return redirect('/user/' + name)
+        if request.form["answer"] != session['data'][session['question']]['answer']:
+            message = "Answer " + request.form["answer"] + " is incorrect, please try again."
+            flash(message)
+            return redirect('/user/' + name)
         if request.form["answer"] == session['data'][session['question']]['answer']:
             session['score'] += 1
             session['question'] += 1
