@@ -83,7 +83,7 @@ def game(name):
                 session['gameover'] = True
             session['question'] += 1
             return redirect('/user/' + name)
-        else:
+    else:
         if request.form["answer"] != session['data'][session['question']]['answer']:
             message = "Answer " + request.form["answer"] + " is incorrect, please try again."
             flash(message)
