@@ -80,8 +80,6 @@ def game(name):
     if request.method == "POST":
         if request.form["skip"] == "Next":
             if request.form["answer"] == session['data'][session['question']]['answer']:
-                if(session['question'] == number_of_questions):
-                    session['gameover'] = True
                 session['score'] += 1
                 session['question'] += 1
                 if(session['question'] == number_of_questions):
