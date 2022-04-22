@@ -85,7 +85,6 @@ def game(name):
         if request.form["answer"] != session['data'][session['question']]['answer']:
             message = "Answer " + request.form["answer"] + " is incorrect, please try again."
             flash(message)
-            session['score'] -= 1
             return redirect('/user/' + name)
         if request.form["answer"] == session['data'][session['question']]['answer']:
             session['score'] += 1
