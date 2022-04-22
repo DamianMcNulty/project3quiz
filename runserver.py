@@ -78,6 +78,7 @@ def game(name):
     if 'user' not in session:
         return redirect('/')
     if request.method == "POST":
+        request.form["answer"] == ""
         if request.form["answer"] == "":
             message = "You have not given an answer, please try again."
             flash(message)
