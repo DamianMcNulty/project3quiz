@@ -83,16 +83,16 @@ def game(name):
                 session['gameover'] = True
             session['question'] += 1
             return redirect('/user/' + name)
-    else:
-        if request.form["answer"] != session['data'][session['question']]['answer']:
-            message = "Answer " + request.form["answer"] + " is incorrect, please try again."
-            flash(message)
-            session['score'] -= 1
-            return redirect('/user/' + name)
-        if request.form["answer"] == session['data'][session['question']]['answer']:
-            session['score'] += 1
-            session['question'] += 1
-            return redirect('/user/' + name)
+        else:
+            if request.form["answer"] != session['data'][session['question']]['answer']:
+                message = "Answer " + request.form["answer"] + " is incorrect, please try again."
+                flash(message)
+                session['score'] -= 1
+                return redirect('/user/' + name)
+            if request.form["answer"] == session['data'][session['question']]['answer']:
+                session['score'] += 1
+                session['question'] += 1
+                return redirect('/user/' + name)
     return render_template("game.html", title = "Game Over" if session['gameover'] else "Question " + str(session['question'] + 1), data = session['data'][session['question']], question = session['question'], year=datetime.now().year)
 
 
