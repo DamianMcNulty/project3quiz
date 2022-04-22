@@ -78,11 +78,6 @@ def game(name):
     if 'user' not in session:
         return redirect('/')
     if request.method == "POST":
-        request.form["answer"] == ""
-        if request.form["answer"] == "":
-            message = "You have not given an answer, please try again."
-            flash(message)
-            return redirect('/user/' + name)
         if request.form["answer"] != session['data'][session['question']]['answer']:
             message = "Answer " + request.form["answer"] + " is incorrect, please try again."
             flash(message)
@@ -93,6 +88,10 @@ def game(name):
             if(session['question'] == number_of_questions):
                 session['gameover'] = True
             return redirect('/user/' + name)
+    else:
+        message = "You have not given an answer, please try again."
+        flash(message)
+        return redirect('/user/' + name)
     return render_template("game.html", title = "Game Over" if session['gameover'] else "Question " + str(session['question'] + 1), data = session['data'][session['question']], question = session['question'], year=datetime.now().year)
 
 
