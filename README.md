@@ -16,7 +16,7 @@
 1.  As a user, I want to create a username which is between 6 and 10 letters or digits long, does not contain spaces and does not begin with a digit so that I can submit my username to start a game.
 2.  As a user, I want to solve a coding challenge and check my answer so that I can score a point
 3.  As a user, I want solve the next challenge or finish the game
-4.  As a user, I want to know how my score as I play the game
+4.  As a user, I want to know my score as I play the game
 5.  As a user, I want to view the leaderboard so that I can compare how I have played a game to other users
 
 ### Wireframes
