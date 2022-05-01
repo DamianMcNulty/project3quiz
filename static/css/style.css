@@ -16,6 +16,12 @@ html {
   font-size: 65.5%;
 }
 
+.Acumin-pro {
+  font-family: acumin-pro,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /*****************************************\
 
   #BORDER-TITLE
