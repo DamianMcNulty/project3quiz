@@ -28,7 +28,7 @@
 1.  [HTML5](https://en.wikipedia.org/wiki/HTML5)
 2.  [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 3.  [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-4.  [Python 3.9.1](https://www.python.org/)
+4.  [Python 3.9.11](https://www.python.org/)
 5. [Coverage](https://coverage.readthedocs.io/en/coverage-5.5/#)
 6. [JQuery 3.6.0](https://jquery.com/)
 7. [DataTables 1.10.24](https://github.com/DataTables/DataTables)
