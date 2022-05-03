@@ -24,11 +24,12 @@
                 </p>{{ data.code }}</p>
                 <div class="control-group text-center">
                         {% for answer in data.answers %}
-                            <span class="Quiz__border inline form-check-inline">
-                                <label for="answer-{{ answer }}">
-                                    {{ answer }}     
+                            <span class="Quiz__border inline">
+                                <label>
+                                    {{ answer }}
+                                    <input type="radio" class="btn btn-default btn-success pull-right" id="answer-{{ answer }}" name="answer" value={{ answer }} required>
                                 </label>
-                                <input type="radio" class="btn btn-default btn-success pull-right" id="answer-{{ answer }}" name="answer" value={{ answer }} required> 
+                                 
                             </span>
                         {% endfor %}
                     
