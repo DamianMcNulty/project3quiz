@@ -19,7 +19,7 @@
                 <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
         </div>
         {% if session['gameover'] == False %}
-            <form method="POST" name="sendAnswer" id="answerForm">
+            <form class="ff minh100vh" method="POST" name="sendAnswer" id="answerForm">
                 
                 </p>{{ data.code }}</p>
                 <div class="control-group text-center">
@@ -33,7 +33,7 @@
                             </span>
                         {% endfor %}
                     
-                    <div class="form-group floating-label-form-group controls">
+                    <div class="form-group floating-label-form-group controls fb">
                         <p class="help-block text-danger"></p>
                         {% with messages = get_flashed_messages() %} 
                             {% if messages %}
