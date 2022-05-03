@@ -1,11 +1,6 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="row landing">
     <div class="col-sm-6">
-        <div class="">
-                <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
-        </div>
-    </div>
-    <div class="col-sm-6">
         <header class="text-center">
             <span class="Exit__button fs2">Player: {{ session['user'] }}</span>
             <span class="Exit__button fs2">Score: {{ session['score'] }}</span>
@@ -15,6 +10,11 @@
                 <a class="Exit__button" href="{{ url_for('leaderboard') }}">Exit game</a>
             {% endif %}
         </span> 
+        <div class="">
+                <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
+        </div>
+    </div>
+    <div class="col-sm-6">
         {% if session['gameover'] == False %}
             <form method="POST" name="sendAnswer" id="answerForm">
                 <p>{{ data.question }}</p>
