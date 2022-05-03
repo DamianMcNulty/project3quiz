@@ -12,6 +12,8 @@
                 <a class="Exit__button" href="{{ url_for('leaderboard') }}">Exit game</a>
             {% endif %}
         </span>
+        <br>
+        <hr>
         <p>{{ data.question }}</p>
         <div class="">
                 <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
