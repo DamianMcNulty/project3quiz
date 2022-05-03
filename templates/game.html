@@ -1,5 +1,5 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="row landing">
+<div class="row landing ff">
     <h1 class="text-center Acumin-pro">Java Quiz</h1>
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </form>
-        <footer>
+        <footer class="fb">
             <div class="text-center">{{ question + 1 }} of {{ session['total'] }}</div>
         </footer>
         {% else %}
