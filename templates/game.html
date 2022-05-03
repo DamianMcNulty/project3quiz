@@ -22,12 +22,12 @@
                 </p>{{ data.code }}</p>
                 <div class="control-group">
                         {% for answer in data.answers %}
-                            <p class="Quiz__border">
+                            <span class="Quiz__border">
                                 <label>
                                     {{ answer }}
                                     <input type="radio" class="btn btn-default btn-success pull-right" id="answer-{{ answer }}" name="answer" value={{ answer }} required><br /> 
                                 </label>
-                            </p>
+                            </span>
                             <br />
                         {% endfor %}
                     
