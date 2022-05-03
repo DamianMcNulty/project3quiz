@@ -40,18 +40,17 @@
                                 <div class="alert alert-danger text-center">{{ messages[0] }}</div>
                             {% endif %} 
                         {% endwith %}
-                        <div>
+                        <footer class="ht black">
+                            <div class="text-center">{{ question + 1 }} of {{ session['total'] }}</div>
                             <input type="submit" class="btn btn-default btn-success pull-right bg__green text__black" name="skip" value="Next">
-                        </div>
+                        </footer>
+                        {% else %}
+                            <h2 class="text-center">Game over</h2>
+                        {% endif %}
                     </div>
                 </div>
             </form>
     </div>
 </div>
-    <footer class="ht black">
-        <div class="text-center">{{ question + 1 }} of {{ session['total'] }}</div>
-    </footer>
-    {% else %}
-        <h2 class="text-center">Game over</h2>
-    {% endif %}
+    
 {% endblock %}
