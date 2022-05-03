@@ -199,12 +199,12 @@ html {
   background-color: #cfc67e;
 }
 
-.green {
+.bg__green {
   background-color: #93CB91;
 }
 
-.darkgreen {
-  background-color: #52A14F;
+.text__darkgreen {
+  color: #52A14F;
 }
 
 /*****************************************\
