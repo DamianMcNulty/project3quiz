@@ -13,7 +13,10 @@
     <div class="landing m0a mt10 mb10 w80-20vw">
         <form method="POST" name="login">
             <label for="username">Your user name</label>
-            <input class="w100" type="text" name="name" placeholder="Enter username" id="username">
+            <div class="form-group">
+                <i class="bi bi-person"></i>
+                <input class="w100" type="text" name="name" placeholder="Enter username" id="username">
+            </div>
             <br>
             <br>
             {% with messages = get_flashed_messages() %} 
