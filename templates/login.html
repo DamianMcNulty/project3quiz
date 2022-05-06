@@ -12,7 +12,8 @@
     <span class="Quiz__border help__bg" data-toggle="tooltip" title="Enter a username and press play">help ?</span>
     <div class="landing m0a mt10 mb10 w80-20vw">
         <form method="POST" name="login">
-            <input class="w100" type="text" name="name" placeholder="Enter username">
+            <label for="username">Your user name</label>
+            <input class="w100" type="text" name="name" placeholder="Enter username" id="username">
             <br>
             <br>
             {% with messages = get_flashed_messages() %} 
