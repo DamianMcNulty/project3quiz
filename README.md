@@ -5,7 +5,7 @@
 
 ## Goal
 
-> To create a Quiz Game using a python and flask web application
+> To create a Quiz Game
 
 ## Description
 
