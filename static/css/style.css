@@ -288,5 +288,6 @@ html {
 .span__icons {
   margin-left: 5px;
   height: 25px;
+  position: absolute;
 }
 
