@@ -22,6 +22,10 @@ html {
   font-style: normal;
 }
 
+.fs {
+  font-size: 1rem;
+}
+
 /*****************************************\
 
   #BORDER-TITLE
@@ -72,10 +76,6 @@ html {
 @media (min-width: 37.8rem) {
   .w80-20vw {
     width: 20vw;
-  }
-  
-  .fs {
-    font-size: 0.5rem;
   }
 }
 
