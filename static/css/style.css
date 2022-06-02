@@ -22,6 +22,10 @@ html {
   font-style: normal;
 }
 
+.fs {
+  font-size: 2rem;
+}
+
 /*****************************************\
 
   #BORDER-TITLE
