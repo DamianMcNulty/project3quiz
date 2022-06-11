@@ -93,7 +93,7 @@ def game(name):
                 session['question'] -= 1
             session['question'] += 1
             return redirect('/user/' + name)
-    return render_template("game.html", title = "Game Over" if session['gameover'] else "Question " + str(session['question']), data = session['data'][session['question']], question = session['question'], year=datetime.now().year)
+    return render_template("game.html", title = "Game Over" if session['gameover'] else "Question " + str(session['question'] + 1), data = session['data'][session['question']], question = session['question'], year=datetime.now().year)
 
 
 if environ.get('DEVELOPMENT'):
