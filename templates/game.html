@@ -14,9 +14,12 @@
             </span>
         </header>
         <br>
+        <br>
         <div class="">
                 <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
         </div>
+        <br>
+        <br>
         {% if session['gameover'] == False %}
             <form class="ff minh100vh" method="POST" name="sendAnswer" id="answerForm">
                
