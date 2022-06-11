@@ -17,7 +17,7 @@ mongo = PyMongo(app)
 
 names = []
 user = []
-number_of_questions = 6
+number_of_questions = 7
 
 @app.route('/')
 def index():
