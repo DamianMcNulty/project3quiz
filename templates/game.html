@@ -1,7 +1,7 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="row landing">
     <h1 class="text-center Acumin-pro">Java Quiz</h1>
-    
+
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
         <header>
@@ -9,53 +9,56 @@
             <span class="Exit__button fs2 pull-left">Score: {{ session['score'] }}</span>
             <span class="pull-right">
                 {% if session['user'] %}
-                    <a class="Exit__button" href="{{ url_for('leaderboard') }}">Exit game</a>
+                <a class="Exit__button" href="{{ url_for('leaderboard') }}">Exit game</a>
                 {% endif %}
             </span>
         </header>
         <br>
         <br>
         <div class="">
-                <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
+            <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
         </div>
         <br>
         <br>
         {% if session['gameover'] == False %}
-            <form class="ff minh100vh" method="POST" name="sendAnswer" id="answerForm">
-               
-                <div class="control-group text-center">
-                        {% for answer in data.answers %}
-                            <span class="Quiz__border inline">
-                                <label>
-                                    {{ answer }}
-                                    <input type="radio" class="btn btn-default btn-success pull-right" id="answer-{{ answer }}" name="answer" value={{ answer }} required>
-                                </label>
-                                 
-                            </span>
-                        {% endfor %}
-                        <span class="Quiz__border help__bg" data-toggle="tooltip" title="{{ data.question }} {{ data.code }}">?</span>
-                    
-                    <div class="form-group floating-label-form-group controls fb">
-                        <p class="help-block text-danger"></p>
-                        {% with messages = get_flashed_messages() %} 
-                            {% if messages %}
-                                <div class="alert alert-danger text-center">
-                                    <span class="material-symbols-outlined">warning</span>
-                                    {{ messages[0] }}
-                                </div>
-                            {% endif %} 
-                        {% endwith %}
-                        <footer class="ht">
-                            <div class="text-center">{{ question + 1 }} of {{ session['total'] }}</div>
-                            <input type="submit" class="btn btn-default btn-success pull-right bg__green text__black" name="skip" value="Next">
-                        </footer>
-                        {% else %}
-                            <h2 class="text-center">Game over</h2>
-                        {% endif %}
+        <form class="ff minh100vh" method="POST" name="sendAnswer" id="answerForm">
+
+            <div class="control-group text-center">
+                {% for answer in data.answers %}
+                <span class="Quiz__border inline">
+                    <label>
+                        {{ answer }}
+                        <input type="radio" class="btn btn-default btn-success pull-right" id="answer-{{ answer }}"
+                            name="answer" value={{ answer }} required>
+                    </label>
+
+                </span>
+                {% endfor %}
+                <span class="Quiz__border help__bg" data-toggle="tooltip"
+                    title="{{ data.question }} {{ data.code }}">?</span>
+
+                <div class="form-group floating-label-form-group controls fb">
+                    <p class="help-block text-danger"></p>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <div class="alert alert-danger text-center">
+                        <span class="material-symbols-outlined">warning</span>
+                        {{ messages[0] }}
                     </div>
+                    {% endif %}
+                    {% endwith %}
+                    <footer class="ht">
+                        <div class="text-center">{{ question + 1 }} of {{ session['total'] }}</div>
+                        <input type="submit" class="btn btn-default btn-success pull-right bg__green text__black"
+                            name="skip" value="Next">
+                    </footer>
                 </div>
-            </form>
+            </div>
+        </form>
+        {% else %}
+        <h2 class="text-center">Game over</h2>
+        {% endif %}
     </div>
 </div>
-    
+
 {% endblock %}
