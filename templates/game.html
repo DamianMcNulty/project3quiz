@@ -20,8 +20,7 @@
         </div>
         {% if session['gameover'] == False %}
             <form class="ff minh100vh" method="POST" name="sendAnswer" id="answerForm">
-                
-                </p>{{ data.code }}</p>
+               
                 <div class="control-group text-center">
                         {% for answer in data.answers %}
                             <span class="Quiz__border inline">
@@ -32,6 +31,7 @@
                                  
                             </span>
                         {% endfor %}
+                        <span class="Quiz__border help__bg" data-toggle="tooltip" title="{{ data.code }}">?</span>
                     
                     <div class="form-group floating-label-form-group controls fb">
                         <p class="help-block text-danger"></p>
