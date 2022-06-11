@@ -1,6 +1,11 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="row landing">
     <h1 class="text-center Acumin-pro">Java Quiz</h1>
+    <span class="pull-right">
+        {% if session['user'] %}
+            <a class="Exit__button" href="{{ url_for('leaderboard') }}">Exit game</a>
+        {% endif %}
+    </span>
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
         <header class="text-center">
@@ -8,11 +13,6 @@
             <span class="Exit__button fs2">Player: {{ session['user'] }}</span>
             <span class="Exit__button fs2">Score: {{ session['score'] }}</span>
         </header>
-        <span class="pull-right">
-            {% if session['user'] %}
-                <a class="Exit__button" href="{{ url_for('leaderboard') }}">Exit game</a>
-            {% endif %}
-        </span>
         <br>
         <div class="">
                 <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
