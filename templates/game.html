@@ -40,12 +40,12 @@
                 <div class="form-group floating-label-form-group controls fb">
                     <p class="help-block text-danger"></p>
                     {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                    <div class="alert alert-danger text-center">
-                        <span class="material-symbols-outlined">warning</span>
-                        {{ messages[0] }}
-                    </div>
-                    {% endif %}
+                        {% if messages %}
+                        <div class="alert alert-danger text-center">
+                            <span class="material-symbols-outlined">warning</span>
+                            {{ messages[0] }}
+                        </div>
+                        {% endif %}
                     {% endwith %}
                     <footer class="ht">
                         <div class="text-center">{{ question + 1 }} of {{ session['total'] }}</div>
