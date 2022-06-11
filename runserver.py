@@ -90,6 +90,7 @@ def game(name):
         if request.form["skip"] == "Next":
             if(session['question'] == number_of_questions):
                 session['gameover'] = True
+                session['question'] -= 1
             session['question'] += 1
             return redirect('/user/' + name)
     return render_template("game.html", title = "Game Over" if session['gameover'] else "Question " + str(session['question']), data = session['data'][session['question']], question = session['question'], year=datetime.now().year)
