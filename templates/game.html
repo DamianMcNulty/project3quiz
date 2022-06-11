@@ -14,7 +14,6 @@
             {% endif %}
         </span>
         <br>
-        <p>{{ data.question }}</p>
         <div class="">
                 <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
         </div>
@@ -31,7 +30,7 @@
                                  
                             </span>
                         {% endfor %}
-                        <span class="Quiz__border help__bg" data-toggle="tooltip" title="{{ data.code }}">?</span>
+                        <span class="Quiz__border help__bg" data-toggle="tooltip" title="{{ data.question }} {{ data.code }}">?</span>
                     
                     <div class="form-group floating-label-form-group controls fb">
                         <p class="help-block text-danger"></p>
