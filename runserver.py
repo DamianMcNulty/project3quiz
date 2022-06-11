@@ -64,7 +64,7 @@ def login():
             session['user'] = request.form["name"]
             session['score'] = 0
             session['question'] = 0
-            session['total'] = number_of_questions + 1
+            session['total'] = number_of_questions
             session['gameover'] = False
         return redirect('/user/' + session['user'])
     return render_template(
