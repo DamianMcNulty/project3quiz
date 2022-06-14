@@ -261,8 +261,9 @@ html {
 }
 
 .Exit__button {
-  border: 1px solid red;
-  background-color: white;
+  border: 0.2px solid red;
+  background-color: #EBB9BA;
+  border-radius: 5px;
 }
 
 /*****************************************\
