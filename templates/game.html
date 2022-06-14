@@ -8,7 +8,7 @@
             <span class="Exit__button fs2 pull-left">Score: {{ session['score'] }}</span>
             <span class="pull-right">
                 {% if session['user'] %}
-                <a class="Exit__button" href="{{ url_for('leaderboard') }}">Exit game</a>
+                <a class="Exit__button" href="{{ url_for('leaderboard') }}">EXIT</a>
                 {% endif %}
             </span>
         </header>
