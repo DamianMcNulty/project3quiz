@@ -14,27 +14,24 @@
         </header>
         <br>
         <br>
-        <div class="">
+        <div class="pr">
             <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border">
+            <span class="pa t5 l95 ttc Quiz__border help__bg" data-toggle="tooltip"
+                title="{{ data.question }} {{ data.code }}">?</span>
         </div>
         <br>
         <br>
         {% if session['gameover'] == False %}
             <form class="ff minh100vh" method="POST" name="sendAnswer" id="answerForm">
 
-                <div class="control-group text-center">
+                <div id="question1" class="control-group text-center YesNo">
+                    <label>Please select one of the following options:</label>
                     {% for answer in data.answers %}
-                    <span class="Quiz__border inline">
-                        <label>
-                            {{ answer }}
-                            <input type="radio" class="btn btn-default btn-success pull-right" id="answer-{{ answer }}"
-                                name="answer" value={{ answer }} required>
-                        </label>
-
+                    <span class="custom-checkbox" id="answer-{{ answer }}">
+                        <input name="answer" type="radio" value={{ answer }} required/>
+                        <span class="box">{{ answer }}</span>
                     </span>
                     {% endfor %}
-                    <span class="Quiz__border help__bg" data-toggle="tooltip"
-                        title="{{ data.question }} {{ data.code }}">?</span>
 
                     <div class="form-group floating-label-form-group controls fb">
                         <p class="help-block text-danger"></p>

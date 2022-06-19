@@ -118,7 +118,7 @@ html {
 }
 /*****************************************\
 
-  #POSITION-TITLE
+  #ABSOLUTE POSITIONING
   
 \*****************************************/
 .pr {
@@ -159,6 +159,14 @@ html {
 
 .l0 {
   left: 0;
+}
+
+.t5 {
+  top: 5%;
+}
+
+.l95 {
+  left: 95%;
 }
 
 /*****************************************\
@@ -296,3 +304,74 @@ html {
   position: absolute;
 }
 
+/*****************************************\
+
+  #custom radio boxes https://codepen.io/DamianMcNulty/pen/ZErGYgr
+  
+\*****************************************/
+div {  }
+div > label {
+	display: block;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-checkbox > input {
+  position: absolute;
+  outline: none;
+  left: 0;
+  top: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  border: none;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* DEFAULT STYLES */
+.custom-checkbox > .box {
+    background-color: #EAEFBA;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 50px;
+/*     line-height: 55px; */
+    text-align: center;
+	 vertical-align: center;
+    width: 50px;
+	 border: 1px solid #6C741A;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    position: relative;
+	 font-weight: bold;
+	 color: #635758;
+	 padding-top: 15px;
+}
+.custom-checkbox > .box > .tick {
+  display: none;
+}
+
+/* CHECKED STYLES */
+.custom-checkbox > input:checked ~ .box,
+/*IE8*/.custom-checkbox.checked > .box{
+	background: #62c8d0;
+	color: #FFF;
+}
+.custom-checkbox > input:checked ~ .box > .tick,
+/*IE8*/.custom-checkbox.checked > .box > .tick {
+  display: block;
+}
+
+.custom-checkbox > input:active ~ .box {
+  border-color: #aaa;
+  background-color: #ddd;
+}
