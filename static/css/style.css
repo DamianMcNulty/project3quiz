@@ -219,6 +219,10 @@ html {
   background-color: #93CB91;
 }
 
+.bg__yellow {
+  background-color: #D9D39F;
+}
+
 .text__darkgreen {
   color: #52A14F;
 }
@@ -264,7 +268,7 @@ html {
   
 \*****************************************/
 .Quiz__border {
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 4px solid #1E0405;
   border-radius: 5px;
 }
 
