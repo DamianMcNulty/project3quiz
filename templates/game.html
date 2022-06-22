@@ -10,10 +10,8 @@
             title="{{ data.question }} {{ data.code }}">?</span>
             <div class="Acumin-pro pa b15 l50 ttc">{{ question + 1 }} of {{ session['total'] }}</div>
         </div>
-        <br>
-        <br>
         {% if session['gameover'] == False %}
-        <form class="ff minh100vh" method="POST" name="sendAnswer" id="answerForm">
+        <form class="ff" method="POST" name="sendAnswer" id="answerForm">
             
             <div id="question1" class="control-group text-center YesNo">
                     <label>Please select one of the following options:</label>
