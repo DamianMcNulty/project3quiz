@@ -12,7 +12,7 @@
                 title="{{ data.question }} {{ data.code }}">?</span>
         </div>
         <footer class="ht">
-            <span class="pull-right">
+            <span class="pull-left">
                 {% if session['user'] %}
                 <a class="Exit__button text__black btn btn-default btn-danger" href="{{ url_for('leaderboard') }}">EXIT</a>
                 {% endif %}
