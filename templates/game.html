@@ -3,12 +3,12 @@
     
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
-        <h1 class="fs2 text-center Acumin-pro">Score: {{ session['score'] }}</h1>
+        <h1 class="fs2 pull-right Acumin-pro">Score: {{ session['score'] }}</h1>
+        <div class="Acumin-pro pull-left">{{ question + 1 }} of {{ session['total'] }}</div>
         <div class="pr">
             <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border bg__yellow">
             <span class="pa t5 l95 ttc Help__border help__bg" data-toggle="tooltip"
             title="{{ data.question }} {{ data.code }}">?</span>
-            <div class="Acumin-pro pa b15 l50 ttc">{{ question + 1 }} of {{ session['total'] }}</div>
         </div>
         {% if session['gameover'] == False %}
         <form class="ff" method="POST" name="sendAnswer" id="answerForm">
