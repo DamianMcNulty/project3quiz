@@ -7,7 +7,8 @@
         <div class="pr">
             <img src="{{ session['data'][session['question']].url2 }}" class="w100 Quiz__border bg__yellow">
             <span class="pa t5 l95 ttc Help__border help__bg" data-toggle="tooltip"
-                title="{{ data.question }} {{ data.code }}">?</span>
+            title="{{ data.question }} {{ data.code }}">?</span>
+            <div class="Acumin-pro pa t50 l50 ttc">{{ question + 1 }} of {{ session['total'] }}</div>
         </div>
         <br>
         <br>
@@ -39,7 +40,6 @@
                                 <a class="Exit__button text__black btn btn-default btn-danger" href="{{ url_for('leaderboard') }}">EXIT</a>
                                 {% endif %}
                             </span>
-                            <div class="Acumin-pro text-center">{{ question + 1 }} of {{ session['total'] }}</div>
                             <input type="submit" class="btn btn-default btn-success pull-right bg__green text__black"
                                 name="skip" value="Next">
                         </footer>
