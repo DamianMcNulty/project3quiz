@@ -11,11 +11,9 @@
 <section class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 Quiz__border mb10">
     <div class="landing m0a mt10 mb10 w80-20vw">
         <form class="form-group" method="POST" name="login">
-            <label for="username">Your username <span class="Help__border help__bg" data-toggle="tooltip" title="Enter a username and press play">?</span></label>
-            <div class="input-group">
-                <input class="w100 form-control input__icons" type="text" name="name" placeholder="Enter username" id="username">
-            </div>
             <br>
+            <label for="username">Your username <span class="Help__border help__bg" data-toggle="tooltip" title="Enter a username and press play">?</span></label>
+                <input class="w100 form-control input__icons input-lg" type="text" name="name" placeholder="Enter username" id="username">
             <br>
             {% with messages = get_flashed_messages() %}
             {% if messages %}
