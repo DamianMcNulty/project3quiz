@@ -17,7 +17,7 @@
                     <label>Please select one of the following options:</label>
                     {% for answer in data.answers %}
                     <span class="custom-checkbox" id="answer-{{ answer }}">
-                        <input name="answer" type="radio" value={{ answer }} required/>
+                        <input name="answer" type="radio" value={{ answer }} />
                         <span class="box">{{ answer }}</span>
                     </span>
                     {% endfor %}

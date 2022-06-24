@@ -86,8 +86,12 @@ def game(name):
                 session['gameover'] = True
             return redirect('/user/' + name)
         if request.form["answer"] != session['data'][session['question']]['answer']:
-            message = "Answer " + request.form["answer"] + " is incorrect, please try again."
-            flash(message)
+            if(session['attempts'] == 0):
+                message1 = "Answer " + request.form["answer"] + " is incorrect, please try again. You have one attempt remaining."
+                flash(message1)
+            if(session['attempts'] == 1):
+                message2 = "Answer " + request.form["answer"] + " is incorrect. You have made two attempts to answer this question. You can not score a point for this question."
+                flash(message2)
             session['score'] -= 1
             session['attempts'] += 1
             return redirect('/user/' + name)
