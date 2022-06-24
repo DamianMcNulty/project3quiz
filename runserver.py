@@ -66,6 +66,7 @@ def login():
             session['question'] = 0
             session['total'] = number_of_questions
             session['gameover'] = False
+            session['attempts'] = 0
         return redirect('/user/' + session['user'])
     return render_template(
         'login.html',
@@ -78,10 +79,17 @@ def game(name):
     if 'user' not in session:
         return redirect('/')
     if request.method == "POST":
+        if(session['attempts'] == 2):
+            session['question'] += 1
+            session['attempts'] = 0
+            if(session['question'] == number_of_questions):
+                session['gameover'] = True
+            return redirect('/user/' + name)
         if request.form["answer"] != session['data'][session['question']]['answer']:
             message = "Answer " + request.form["answer"] + " is incorrect, please try again."
             flash(message)
             session['score'] -= 1
+            session['attempts'] += 1
             return redirect('/user/' + name)
         if request.form["answer"] == session['data'][session['question']]['answer']:
             session['score'] += 1
