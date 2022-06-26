@@ -56,8 +56,16 @@ html {
   font-size: 1.7rem;
 }
 
+.fs1_6 {
+  font-size: 1.6rem;
+}
+
 .fs1_2 {
   font-size: 1.2rem;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /*****************************************\
