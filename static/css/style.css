@@ -28,12 +28,32 @@ html {
   font-style: normal;
 }
 
+.Roboto__bold {
+  font-family: roboto,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.Roboto__medium {
+  font-family: roboto,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .fs2 {
   font-size: 2rem;
 }
 
 .fs2_4 {
   font-size: 2.4rem;
+}
+
+.fs1_7 {
+  font-size: 1.7rem;
+}
+
+.fs1_2 {
+  font-size: 1.2rem;
 }
 
 /*****************************************\
@@ -243,6 +263,10 @@ html {
 
 .darkbrown {
   color: #3D4026;
+}
+
+.lightbrown {
+  color: #635758;
 }
 
 /*****************************************\
