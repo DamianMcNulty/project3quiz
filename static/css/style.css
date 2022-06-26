@@ -449,3 +449,24 @@ div > label {
   padding-left: 0;
   padding-right: 0;
 }
+
+/*****************************************\
+
+  #input placeholder text
+  
+\*****************************************/
+
+::placeholder {
+  color: #191919;
+  opacity: 0.46;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #191919;
+  opacity: 0.46;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #191919;
+  opacity: 0.46;
+}
