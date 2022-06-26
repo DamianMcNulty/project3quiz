@@ -430,3 +430,14 @@ div > label {
   border-color: #aaa;
   background-color: #ddd;
 }
+
+/*****************************************\
+
+  #Bootstrap override to fix table positioning
+  
+\*****************************************/
+
+.col-xs-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
