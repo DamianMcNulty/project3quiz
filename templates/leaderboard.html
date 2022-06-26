@@ -12,7 +12,7 @@
   .tg {
     border-collapse: collapse;
     border-spacing: 0;
-    border-color: #999;
+    /* border-color: #999; */
   }
 
   .tg td {
@@ -62,20 +62,22 @@
     <table class="leaderboard tg col-xs-12 col-sm-offset-4 col-sm-4">
       <thead>
         <tr>
-          <th class="tg-us36">Username</th>
-          <th class="tg-us36">Score</th>
+          <th class="text-center tg-us36">Username</th>
+          <th class="text-center tg-us36">Score</th>
         </tr>
       </thead>
       <tbody>
         {% for user in scores|sort(reverse=True, attribute='score') %}
         <tr>
-          <td class="tg-ov9q">{{ user['name'] }}</td>
-          <td class="tg-ov9q">{{ user['score'] }}</td>
+          <td class="text-center tg-ov9q">{{ user['name'] }}</td>
+          <td class="text-center tg-ov9q">{{ user['score'] }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
 </div>
+<br>
+<br>
 <a class="m0a db text-center" href="{{ url_for('index') }}">Play again</a>
 {% endblock %}

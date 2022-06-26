@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.leaderboard').DataTable( {
         searching: false,
         paging: false,
+        info: false,
         fixedHeader: true,
         responsive: true,
         "iDisplayLength": 5,
