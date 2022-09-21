@@ -50,11 +50,6 @@ Windows
     python runserver.py
     .\env\Scripts\deactivate
 
-## connect to database
-
-    pip install pymongo Flask-PyMongo
-    pip3 freeze --local > requirements.txt
-
 ## Local Backend testing
 
     python test.py
@@ -67,17 +62,6 @@ Windows
 
 -   <https://www.reddit.com/r/learnpython/comments/1hsxxy/faviconico_get_request_in_flask/>
 -   <https://stackoverflow.com/questions/30333299/pymongo-bson-convert-python-cursor-cursor-object-to-serializable-json-object>
-
-## Deployment
-
-    sudo pip3 install flask
-    pip3 freeze --local > requirements.txt
-    heroku login
-    heroku create damianmcdev1-project3quiz --region eu
-    echo web: python runserver.py > Procfile
-    heroku config:set IP="0.0.0.0"
-    heroku config:set PORT="8080"
-    git push heroku master
 
 ## Credits
 
