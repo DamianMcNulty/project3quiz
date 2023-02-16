@@ -22,16 +22,3 @@ $(document).ready(function(){
 	});
 	
 });
-
-// IF IE <9 
-// REPLACE :checked WITH .checked
-if ($.browser.msie && parseInt($.browser.version) < 9) {
-  var inputs = $('.custom-checkbox input');
-  inputs.live('change', function(){
-    var ref = $(this),
-        wrapper = ref.parent();
-    if(ref.is(':checked')) wrapper.addClass('checked');
-    else wrapper.removeClass('checked');
-  });
-  inputs.trigger('change');
-}
