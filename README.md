@@ -27,6 +27,8 @@
 6. [JQuery 3.6.0](https://jquery.com/)
 7. [DataTables 1.10.24](https://github.com/DataTables/DataTables)
 8. [CircleCI](https://circleci.com/)
+9. [Flask](https://flask.palletsprojects.com/en/2.2.x/)
+
 
 ## Local development
 
